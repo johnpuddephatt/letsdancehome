@@ -17,7 +17,7 @@ title: Jekyll!
 email: john@jdp.org.uk
 description: |
   Site description from config
-baseurl: "/letsdance" # the subpath of your site, e.g. /blog
+baseurl: "/letsdancehome" # the subpath of your site, e.g. /blog
 url: "http://blog.letsdance.agency" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 header_pages:
