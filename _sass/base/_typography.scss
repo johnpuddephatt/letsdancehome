@@ -1,8 +1,27 @@
+html {
+  font-size: 0.75em;
+  @media screen and (min-width: $medium-screen) {
+    font-size: 0.8125em;
+  }
+  @media screen and (min-width: $large-screen) {
+    font-size: 0.875em;
+  }
+  @media screen and (min-width: $xl-screen) {
+    font-size: 1em;
+  }
+}
+
+::selection {
+  background-color: $color10;
+  color: white;
+}
+
 body {
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -39,4 +58,12 @@ hr {
   border-right: 0;
   border-top: 0;
   margin: $base-spacing 0;
+}
+
+
+.sr-only {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  max-height: 0;
 }

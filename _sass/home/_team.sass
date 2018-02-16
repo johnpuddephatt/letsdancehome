@@ -1,0 +1,38 @@
+.section--team
+  padding-top: 6 * $base-spacing
+  padding-bottom: 6 * $base-spacing
+  background-image: linear-gradient(-45deg, $color10 30%, white 30.01%)
+  .container
+    display: flex
+    flex-direction: row
+  .team--photo-container
+    flex: 0 0 40%
+    margin-right: 2 * $base-spacing
+    margin-left: 2 * $base-spacing
+  .team--photo
+    display: block
+    height: auto
+    width: 100%
+  .team--text-container
+    display: flex
+    flex-direction: column
+  .team--text--heading
+    font-size: modular-scale(5)
+    text-align: right
+    margin-top: 2 * $base-spacing
+    margin-right: 2 * $base-spacing
+    text-transform: lowercase
+  .team--text--people
+    margin-top: auto
+    margin-left: 2 * $base-spacing
+  .team--text--people--title
+    font-size: modular-scale(3)
+    text-transform: lowercase
+    margin-bottom: $base-spacing
+  .team--text--people--list
+    .team--text--people--list--name
+      margin-bottom: 0
+    li
+      margin-bottom: $base-spacing
+    li:last-child, p:last-child
+      margin-bottom: 0

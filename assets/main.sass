@@ -4,4 +4,94 @@
 @import 'base/base'
 @import 'neat/neat'
 
+@import 'home/loading'
+@import 'home/hero'
+@import 'home/intro'
+@import 'home/casestudies'
+@import 'home/team'
+
 @import 'navigation'
+@import 'footer'
+
+@import 'fonts'
+
+
+{% assign duration = 3000 %}
+$slide-duration: {{duration}}ms
+
+{% assign transition = 150 %}
+$slide-transition-duration: {{transition}}ms
+
+{% assign delay = duration | divided_by: site.stripe_count %}
+$animation-delay: {{ delay }}ms
+
+
+
+
+.flag
+  border-top: 300vh solid transparent
+  border-left: 300vw solid #0BF9D7
+  height: 300vh
+  width: 300vw
+  position: absolute
+  top: 0
+  left: -100%
+  z-index: 1
+  animation-delay: 5 * $animation-delay
+  &:nth-child(2)
+    border-left-color: #B9AAF1
+    animation-delay: 5.5 * $animation-delay
+    z-index: 2
+  &:nth-child(3)
+    border-left-color: #FECDD3
+    animation-delay: 6 * $animation-delay
+    z-index: 3
+  &:nth-child(4)
+    border-left-color: #4222F1
+    animation-delay: 6.5 * $animation-delay
+    z-index: 4
+  &:nth-child(5)
+    border-left-color: #ED3EA4
+    animation-delay: 7 * $animation-delay
+    z-index: 5
+  &:nth-child(6)
+    border-left-color: #FFA017
+    animation-delay: 7.5 * $animation-delay
+    z-index: 6
+  &:nth-child(7)
+    border-left-color: #9EEFE1
+    animation-delay: 8 * $animation-delay
+    z-index: 7
+  &:nth-child(8)
+    border-left-color: #4222F1
+    animation-delay: 8.5 * $animation-delay
+    z-index: 8
+  &:nth-child(9)
+    border-left-color: #FECDD3
+    animation-delay: 9 * $animation-delay
+    z-index: 9
+  &:nth-child(10)
+    border-left-color: #FFA017
+    animation-delay: 9.5 * $animation-delay
+    z-index: 10
+  &:nth-child(11)
+    border-left-color: #0BF9D7
+    animation-delay: 10 * $animation-delay
+    z-index: 11
+  &:nth-child(12)
+    border-left-color: #FFFFFF
+    animation-delay: 10.5 * $animation-delay
+    z-index: 12
+
+
+@keyframes swipe
+  0%
+    transform: translate(-50vw,50vh)
+  100%
+    transform: translate(50vw,-50vh)
+    opacity: 1
+
+@keyframes fadeIn
+  to
+    opacity: 1
+

@@ -1,0 +1,25 @@
+.section--case-studies
+
+.case-study--container
+  display: flex
+  flex-wrap: wrap
+
+.case-study--item
+  flex: 0 0 calc(50% - #{$base-spacing})
+  overflow: hidden
+  margin-bottom: 2 * $base-spacing
+  &:nth-child(2n-1)
+    margin-right: 2 * $base-spacing
+
+.case-study--thumb
+  display: block
+  width: 100%
+  height: auto
+
+.case-study--title
+  margin-bottom: 0
+  line-height: 1.5 * $base-spacing
+  margin-top: $small-spacing
+
+.case-study-type
+  line-height: $base-spacing

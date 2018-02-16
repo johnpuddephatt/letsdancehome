@@ -3,13 +3,47 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="{{ page.layout}}">
 
-    {% include header.html %}
+    {% if page.layout != 'home' %}
+      {% include header.html %}
+    {% endif %}
 
     <main class="page-content" aria-label="Content">
         {{ content }}
     </main>
+
+    {% if page.layout == 'home' %}
+      <script type="text/javascript" src="/assets/scripts/imagesloaded.pkgd.min.js"></script>
+      <script type="text/javascript" src="/assets/scripts/simpleslider.min.js"></script>
+
+      <script>
+
+        document.addEventListener('DOMContentLoaded',function(){
+          document.documentElement.classList.add('js-loading');
+          document.scrollTop =0;
+
+
+          imagesLoaded( document.getElementById('hero-image-slider'), function( instance ) {
+            setTimeout(function(){
+              document.documentElement.classList.remove('js-loading');
+              simpleslider.getSlider({
+                container: document.getElementById('hero-image-slider'),
+                prop: 'opacity',
+                init: 0,
+                show: 1,
+                end: 0,
+                unit: '',
+                duration: 1
+              });
+            },4000);
+
+          });
+
+        });
+      </script>
+
+    {% endif %}
 
   </body>
 

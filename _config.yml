@@ -13,13 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Jekyll!
+title: Let’s Dance
 email: john@jdp.org.uk
 description: |
-  Site description from config
+  We help good people say good things
 baseurl: "/letsdancehome" # the subpath of your site, e.g. /blog
 url: "http://blog.letsdance.agency" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username:
+twitter_username: letsdanceagency
+cloudinary: letsdance
 header_pages:
 # Build settings
 markdown: kramdown
@@ -29,3 +30,17 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+stripe_count: 13
+collections:
+  slides:
+    output: false
+  casestudies:
+    output: true
+breakpoints:
+  - 320
+  - 480
+  - 640
+  - 960
+  - 1280
+  - 1600
+  - 2000
