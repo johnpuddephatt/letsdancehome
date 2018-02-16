@@ -9,7 +9,7 @@ layout: default
 
 <section class="section section--hero" data-simple-slider id="hero-image-slider">
   {% for slide in site.slides %}
-  	<img src="/assets/images/{{ slide.image }}"/>
+  	<img src="{{ site.baseurl }}/assets/images/{{ slide.image }}"/>
   {% endfor %}
 </section>
 
