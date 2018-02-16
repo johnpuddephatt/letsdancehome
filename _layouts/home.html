@@ -9,7 +9,9 @@ layout: default
 
 <section class="section section--hero" data-simple-slider id="hero-image-slider">
   {% for slide in site.slides %}
-  	<img src="{{ site.baseurl }}/assets/images/{{ slide.image }}"/>
+    {% capture slide_image %}/assets/images/{{ slide.image }}{% endcapture %}
+    {% include cloudinary.html class="team--photo" img=slide_image width="900" height="900" modes="c_fill,g_face,e_sharpen" quality="85" %}
+  	<!-- <img src="{{ site.baseurl }}/assets/images/{{ slide.image }}"/> -->
   {% endfor %}
 </section>
 
@@ -36,7 +38,7 @@ layout: default
     <div class="case-study--container">
       {% for casestudy in site.casestudies %}
         <div class="case-study--item">
-          {% include cloudinary.html class="case-study--thumb" img=casestudy.thumb width="900" height="900" modes="c_fill,g_face,e_sharpen" quality="85" %}
+          {% include cloudinary.html class="case-study--thumb" img=casestudy.thumb width="900" height="600" modes="c_fill,g_face,e_sharpen" quality="85" %}
           <h3 class="case-study--title">{{casestudy.title}}</h3>
           <div class="case-study--type">{{casestudy.type}}</div>
         </div>
