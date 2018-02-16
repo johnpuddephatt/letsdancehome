@@ -7,7 +7,7 @@ http://res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_{{ include.width |
 {% if include.pathonly != 'true' %}"
  width="{{ include.width | default: 500 }}"
  height="{{ include.height | default: 500}}"
- srcset="{% for breakpoint in site.breakpoints %} http://res.cloudinary.com/{{ site.cloudinary }}/image/fetch/{{ breakpoint | prepend: "w_"}},h_100{{ include.quality | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }}/{{ site.url }}{{ site.baseurl }}{{ include.img }} {{ breakpoint }}w{% if forloop.last == false %}, {% endif %}{% endfor %}"
+ srcset="{% for breakpoint in site.breakpoints %} http://res.cloudinary.com/{{ site.cloudinary }}/image/fetch/{{ breakpoint | prepend: "w_"}}{{ breakpoint | times: include.height | divided_by: include.width | prepend: ",h_"}}{{ include.quality | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }}/{{ site.url }}{{ site.baseurl }}{{ include.img }} {{ breakpoint }}w{% if forloop.last == false %}, {% endif %}{% endfor %}"
  sizes="{{ include.sizes | default: "100vw" }}"
  class="{{ include.class }}"
 />{% endif %}
