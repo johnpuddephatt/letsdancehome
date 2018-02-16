@@ -65,7 +65,7 @@ html { font-size: 0.75em; }
 
 body { color: #000000; font-family: "Graphik"; font-size: 1rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-h1, h2, h3, h4, h5, h6 { font-family: "Graphik"; font-size: 1.25em; line-height: 1.4; margin: 0 0 0.8rem; }
+h1, h2, h3, h4, h5, h6 { font-family: "Graphik"; font-size: 1.25em; line-height: 1.4; margin: 0 0 0.8rem; font-weight: 700; }
 
 p { margin: 0 0 0.8rem; }
 
@@ -81,7 +81,7 @@ html.js-loading { overflow: hidden; }
 .section--loading { position: fixed; z-index: 99999; background-color: white; text-align: center; font-size: 3.0517578125em; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; transform: translateY(-100%); transition: 1000ms; animation: loadingBg 5s linear infinite; }
 html.js-loading .section--loading { transform: translateY(0%); transition: 1000ms; }
 
-.loading-message { font-family: "Graphik"; font-weight: 600; color: white; line-height: 1.4; }
+.loading-message { font-family: "Graphik"; font-weight: 700; color: white; line-height: 1.4; }
 
 @keyframes loadingText { 0% { color: #0BF9D7; }
   10%,20% { color: #B9AAF1; }
@@ -124,7 +124,7 @@ html.js-loading .section--hero { transform: translateY(100%); transition: none; 
 .section--team .team--photo-container { flex: 0 0 40%; margin-right: 3.2rem; margin-left: 3.2rem; }
 .section--team .team--photo { display: block; height: auto; width: 100%; }
 .section--team .team--text-container { display: flex; flex-direction: column; }
-.section--team .team--text--heading { font-size: 3.0517578125em; text-align: right; margin-top: 3.2rem; margin-right: 3.2rem; text-transform: lowercase; }
+.section--team .team--text--heading { font-size: 3.0517578125em; font-weight: 700; text-align: right; margin-top: 3.2rem; margin-right: 3.2rem; text-transform: lowercase; }
 .section--team .team--text--people { margin-top: auto; margin-left: 3.2rem; }
 .section--team .team--text--people--title { font-size: 1.953125em; text-transform: lowercase; margin-bottom: 1.6rem; }
 .section--team .team--text--people--list .team--text--people--list--name { margin-bottom: 0; }
@@ -136,7 +136,7 @@ html.js-loading .section--hero { transform: translateY(100%); transition: none; 
 body.home .site-header { position: sticky; top: 0; bottom: auto; margin-top: -4vmax; }
 .site-header .site-title { font-size: 1.5625em; text-transform: lowercase; font-family: "Tide Sans"; font-weight: 700; }
 
-.site-nav { float: right; color: white; }
+.site-nav { float: right; color: white; font-weight: 700; }
 .site-nav .nav-trigger { display: none; }
 .site-nav .menu-icon { display: none; }
 .site-nav label[for="nav-trigger"] { margin-bottom: 0; }
