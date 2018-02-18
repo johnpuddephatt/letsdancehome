@@ -99,8 +99,8 @@
 
             var lazyloadCallback =  function(entries, observer) {
               entries.forEach(entry => {
-                console.log(':::' + entry.target.getAttribute('data-lazyload'));
-                if(entry.target.hasAttribute('data-lazyload')) {
+                
+                if(entry.intersectionRatio > 0 && entry.target.hasAttribute('data-lazyload')) {
                   console.log('2');
                   entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
                   entry.target.setAttribute('data-lazyload',false);
