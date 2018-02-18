@@ -71,6 +71,10 @@
 
             var callback =  function(entries, observer) {
               entries.forEach(entry => {
+                if(entry.target.classList.contains('lazyload')) {
+                  console.log('this is a lazyload');
+                }
+
                 if(entry.intersectionRatio >= .5 && entry.target.classList.contains('lazyload')) {
                   entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
                   entry.target.classList.remove('lazyload');
