@@ -100,9 +100,9 @@
             var lazyloadCallback =  function(entries, observer) {
               entries.forEach(entry => {
 
-                if(entry.intersectionRatio > 0 && entry.target.getAttribute('data-lazyload')) {                  
+                if(entry.intersectionRatio > 0 && entry.target.getAttribute('data-lazyload') != loaded) {
                   entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
-                  entry.target.setAttribute('data-lazyload',false);
+                  entry.target.setAttribute('data-lazyload','loaded');
                 }
               });
             }
