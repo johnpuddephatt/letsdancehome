@@ -103,6 +103,7 @@
                 if(entry.intersectionRatio > 0 && (entry.target.getAttribute('data-lazyload') != 'loaded')) {
                   entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
                   entry.target.setAttribute('data-lazyload','loaded');
+                  console.log('image' + entry.target.getAttribute('src') + 'lazyloaded');
                 }
               });
             }
@@ -118,6 +119,7 @@
           }
           else {
             // @todo: trigger lazy load switch now as no intersection observer exists!
+            console.log('intersection observer not available.');
             lazyload.forEach(image => {
               image.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
               image.setAttribute('data-lazyload',false);
