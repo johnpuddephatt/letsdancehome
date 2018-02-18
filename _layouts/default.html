@@ -30,6 +30,7 @@
             image.addEventListener('load',function(){
               console.log('image ' + image.getAttribute('src').substring(image.getAttribute('src').lastIndexOf('/')+1) + ' loaded');
               sliderImagesLoaded++;
+              console.log(sliderImagesLoaded + ">=" + sliderImages.length + '???');
               if(sliderImagesLoaded >= sliderImages.length) {
                 console.log('all images loaded');
                 document.documentElement.scrollTop = -100;
