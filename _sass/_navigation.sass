@@ -37,39 +37,36 @@
     &:not(:last-child)
       margin-right: 20px
   @media screen and (max-width: $medium-screen)
-    position: absolute
-    top: 9px
     right: $base-spacing / 2
-    background-color: $action-color
-    border: 1px solid $light-gray
-    border-radius: 5px
+    background-color: transparent
+    border: .15rem solid white
+    border-radius: 50%
     text-align: right
     label[for="nav-trigger"]
       display: block
       float: right
-      width: 36px
-      height: 36px
+      width: 2 * $base-spacing
+      height: 2 * $base-spacing
       z-index: 2
       cursor: pointer
     .menu-icon
       display: block
       float: right
-      width: 36px
-      height: 26px
+      width: 2 * $base-spacing
+      height: 2 * $base-spacing
       line-height: 0
-      padding-top: 10px
+      padding-top: $small-spacing
       text-align: center
       > svg path
-        fill: $dark-gray
+        fill: white
     input ~ .trigger
       clear: both
       display: none
     input:checked ~ .trigger
       display: block
-      padding-bottom: 5px
     .page-link
       display: block
-      padding: 5px 10px
-      margin-left: 20px
+      padding: $small-spacing $base-spacing
+      margin-left: $base-spacing
       &:not(:last-child)
         margin-right: 0

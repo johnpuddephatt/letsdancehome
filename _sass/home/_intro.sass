@@ -1,7 +1,8 @@
 .section--intro
-  width: 60%
-  height: 50vw
-  background-image: linear-gradient(135deg, $color10 45%, white 45.01%)
+  @media screen and (min-width: $large-screen)
+    width: 60%
+  min-height: 50vmax
+  background-image: linear-gradient(135deg, $color10 40%, white 40.01%)
   display: flex
   flex-direction: column
   justify-content: center
