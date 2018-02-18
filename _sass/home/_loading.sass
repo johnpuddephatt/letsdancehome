@@ -30,6 +30,11 @@ html.js-loading
   font-weight: 700
   color: white
   line-height: $heading-line-height
+  transform: translateY(-500%)
+  transition: 1000ms
+  html.js-loading &
+    transform: translateY(0%)
+    transition: 1000ms
 
 @keyframes loadingText
   0%

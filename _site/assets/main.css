@@ -81,7 +81,8 @@ html.js-loading { overflow: hidden; }
 .section--loading { position: fixed; z-index: 99999; background-color: white; text-align: center; font-size: 3.0517578125em; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; transform: translateY(-100%); transition: 1000ms; animation: loadingBg 5s linear infinite; }
 html.js-loading .section--loading { transform: translateY(0%); transition: 1000ms; }
 
-.loading-message { font-family: "League Spartan"; font-weight: 700; color: white; line-height: 1.4; }
+.loading-message { font-family: "League Spartan"; font-weight: 700; color: white; line-height: 1.4; transform: translateY(-500%); transition: 1000ms; }
+html.js-loading .loading-message { transform: translateY(0%); transition: 1000ms; }
 
 @keyframes loadingText { 0% { color: #0BF9D7; }
   10%,20% { color: #B9AAF1; }

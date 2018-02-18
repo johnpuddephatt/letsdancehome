@@ -23,7 +23,7 @@
           document.documentElement.scrollTop = -100;
           document.documentElement.classList.add('js-loading');
 
-          imagesLoaded( document.getElementById('hero-image-slider'), function( instance ) {
+          // imagesLoaded( document.getElementById('hero-image-slider'), function( instance ) {
             document.documentElement.scrollTop = -100;
             setTimeout(function(){
               document.documentElement.scrollTop = -100;
@@ -38,7 +38,16 @@
                 duration: 1
               });
             },4000);
+          // });
+
+          var sliderImages = document.querySelectorAll('#hero-image-slider img');
+
+          sliderImages.forEach(image => {
+            image.addEventListener('load',function(){
+              console.log('image ' + image.getAttribute('src').substring(image.getAttribute('src').lastIndexOf('/')+1) + ' loaded');
+            });
           });
+
         });
       </script>
 
