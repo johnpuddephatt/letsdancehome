@@ -37,7 +37,7 @@ layout: default
     <div class="case-study--container">
       {% for casestudy in site.casestudies %}
         <div class="case-study--item" data-aos="fade-up" data-aos-ratio=".25">
-          {% include cloudinarylazy.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="600" sizes="(min-width: 900px) 50vw, 100vw" modes="c_fill,e_sharpen" quality="85" %}
+          {% include cloudinarylazy.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="600" sizes="(min-width: 900px) 35vw, 100vw" modes="c_fill,e_sharpen" quality="85" %}
           <h3 class="case-study--title">{{casestudy.title}}</h3>
           <div class="case-study--type">{{casestudy.type}}</div>
         </div>
