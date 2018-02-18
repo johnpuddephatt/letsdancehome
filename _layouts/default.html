@@ -24,30 +24,31 @@
           document.documentElement.classList.add('js-loading');
 
           // imagesLoaded( document.getElementById('hero-image-slider'), function( instance ) {
-            document.documentElement.scrollTop = -100;
-            setTimeout(function(){
-              document.documentElement.scrollTop = -100;
-              document.documentElement.classList.remove('js-loading');
-              simpleslider.getSlider({
-                container: document.getElementById('hero-image-slider'),
-                prop: 'opacity',
-                init: 0,
-                show: 1,
-                end: 0,
-                unit: '',
-                duration: 1
-              });
-            },4000);
-          // });
-
           var sliderImages = document.querySelectorAll('#hero-image-slider img');
-
+          var sliderImagesLoaded = 0;
           sliderImages.forEach(image => {
             image.addEventListener('load',function(){
               console.log('image ' + image.getAttribute('src').substring(image.getAttribute('src').lastIndexOf('/')+1) + ' loaded');
+              sliderImagesLoaded++;
+              if(sliderImagesLoaded >= sliderImages.length) {
+                console.log('all images loaded');
+                document.documentElement.scrollTop = -100;
+                setTimeout(function(){
+                  document.documentElement.scrollTop = -100;
+                  document.documentElement.classList.remove('js-loading');
+                  simpleslider.getSlider({
+                    container: document.getElementById('hero-image-slider'),
+                    prop: 'opacity',
+                    init: 0,
+                    show: 1,
+                    end: 0,
+                    unit: '',
+                    duration: 1
+                  });
+                },4000);
+              }
             });
           });
-
         });
       </script>
 
