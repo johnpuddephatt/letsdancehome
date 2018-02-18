@@ -10,8 +10,7 @@ layout: default
 <section class="section section--hero" data-simple-slider id="hero-image-slider">
   {% for slide in site.slides %}
     {% capture slide_image %}/assets/images/{{ slide.image }}{% endcapture %}
-    {% include cloudinary.html class="team--photo" img=slide_image width="1280" height="720" modes="c_fill,e_sharpen" quality="85" %}
-  	<!-- <img src="{{ site.baseurl }}/assets/images/{{ slide.image }}"/> -->
+    {% include cloudinary.html img=slide_image width="1280" height="720" modes="c_fill,e_sharpen" quality="85" %}
   {% endfor %}
 </section>
 
