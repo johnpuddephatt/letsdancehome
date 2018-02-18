@@ -229,42 +229,8 @@
     </main>
 
     
-      <script type="text/javascript" src="/assets/scripts/imagesloaded.pkgd.min.js"></script>
       <script type="text/javascript" src="/assets/scripts/simpleslider.min.js"></script>
-
-      <script>
-        document.documentElement.scrollTop = -100;
-        document.addEventListener('DOMContentLoaded',function(){
-          document.documentElement.scrollTop = -100;
-          document.documentElement.classList.add('js-loading');
-
-          // imagesLoaded( document.getElementById('hero-image-slider'), function( instance ) {
-            document.documentElement.scrollTop = -100;
-            setTimeout(function(){
-              document.documentElement.scrollTop = -100;
-              document.documentElement.classList.remove('js-loading');
-              simpleslider.getSlider({
-                container: document.getElementById('hero-image-slider'),
-                prop: 'opacity',
-                init: 0,
-                show: 1,
-                end: 0,
-                unit: '',
-                duration: 1
-              });
-            },4000);
-          // });
-
-          var sliderImages = document.querySelectorAll('#hero-image-slider img');
-
-          sliderImages.forEach(image => {
-            image.addEventListener('load',function(){
-              console.log('image ' + image.getAttribute('src').substring(image.getAttribute('src').lastIndexOf('/')+1) + ' loaded');
-            });
-          });
-
-        });
-      </script>
+      <script type="text/javascript" src="/assets/scripts/initialise.js"></script>
 
       <script>
         document.addEventListener('DOMContentLoaded',function(){
