@@ -141,6 +141,12 @@
       transition-duration: 0.5s;
     }
 
+
+    [data-aos][data-aos][data-aos-duration="750"],
+     &[data-aos-duration="750"] [data-aos] {
+      transition-duration: .75s;
+    }
+
     [data-aos][data-aos][data-aos-delay="500"],
      &[data-aos-delay="500"] [data-aos] {
       transition-delay: 0;

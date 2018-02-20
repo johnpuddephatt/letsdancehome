@@ -1,8 +1,8 @@
 .section--intro
   @media screen and (min-width: $large-screen)
-    width: 60%
+    width: 50%
   min-height: 50vmax
-  background-image: linear-gradient(135deg, $color10 40%, white 40.01%)
+  // background-image: linear-gradient(135deg, $color10 40%, white 40.01%)
   display: flex
   flex-direction: column
   justify-content: center
@@ -16,7 +16,7 @@
       position: absolute
       width: 5 * $base-spacing
       height: .15 * $base-spacing
-      left: calc(100% - #{$base-spacing})
+      left: calc(100% + #{$base-spacing})
       bottom: 7 * $base-spacing
       background-color: $color3
       transform: rotate(-45deg)
@@ -24,14 +24,8 @@
       top: calc(100% + #{3 * $base-spacing})
       bottom: auto
       left: auto
-      right: 5 * $base-spacing
+      right: 3 * $base-spacing
 
 .intro-title
-  font-size: modular-scale(3)
-  display: none
-  + p
-    font-family: $heading-font-family
-    font-size: modular-scale(2)
-    line-height: $heading-line-height
-    font-weight: 700
-    margin-bottom: $base-spacing
+  font-size: modular-scale(2)
+  margin-bottom: $base-spacing

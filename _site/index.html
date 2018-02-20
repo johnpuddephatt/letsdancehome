@@ -130,9 +130,9 @@
 
 <section class="section--intro">
   <div class="container">
-    <h1 class="intro-title">We’re Let’s Dance.</h1>
-    <p>We’re a small creative agency specialising in supporting organisations doing good. We like to do good work for good people.</p>
-    <p>Branding is our main area of work, and we’re both experienced and interested in creating brands that have something to say, that get heard and that people understand. We love bringing a brand to life in physical spaces and online.</p>
+    <!-- <h1 class="intro-title">We’re Let’s Dance.</h1> -->
+    <h2 class="intro-title">We’re a small creative agency specialising in supporting organisations doing good. We like to do good work for good people.</h2>
+    <p>Branding is our main area of work. We’re interested in creating brands that have something to say, that get heard and that people understand. We love bringing a brand to life in physical spaces and online.</p>
   </div>
 </section>
 
@@ -221,6 +221,43 @@
   </div>
 </section>
 
+
+<section>
+  <ul class="container animated-list">
+    <li><h3>First</h3></li>
+    <li><h3>Second</h3></li>
+    <li><h3>Third</h3></li>
+    <li><h3>Fourth</h3></li>
+    <li><h3>Fifth</h3></li>
+  </ul>
+</section>
+
+<style>
+.animated-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.animated-list li:nth-child(3) {
+  animation: test 3s infinite;
+}
+
+@keyframes test {
+  0% {
+    order: 0
+  }
+  25% {
+    order: 1
+  }
+  50% {
+    order: 3;
+    opacity: .5;
+
+  }
+
+}
+</style>
+
 <footer class="section--footer">
 
   <h2 class="footer-heading">Want to work with us?</h2>
@@ -241,7 +278,7 @@
               offset: 120,
               delay: 0,
               easing: "ease",
-              duration: 400,
+              duration: 750,
               disable: !1,
               once: !1,
               startEvent: "DOMContentLoaded"
