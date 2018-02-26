@@ -23,6 +23,11 @@ body {
 
 .container {
   // max-width: $large-screen;
-  margin: 0 4vmax;
+  padding: 0 4vmax;
+}
 
+.narrow-container {
+  padding: 0 4vmax;
+  max-width: $large-screen;
+  margin: 0 auto;
 }

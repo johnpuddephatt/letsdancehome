@@ -6,7 +6,15 @@
   justify-content: center
   align-items: center
   color: white
+  animation: hue-rotation 3s linear infinite
 
 .footer-heading
   font-size: modular-scale(5)
   text-transform: lowercase
+
+
+@keyframes hue-rotation
+  0%
+    filter: hue-rotate(0)
+  100%
+    filter: hue-rotate(360deg)
