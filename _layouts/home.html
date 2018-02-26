@@ -37,7 +37,11 @@ layout: default
       {% for casestudy in site.casestudies %}
         <div class="case-study--item" data-aos="fade-up" data-aos-ratio=".25">
           <div class="case-study--image">
-            {% include cloudinarylazy.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="600" sizes="40vw" modes="c_fill,e_sharpen" %}
+            {% if forloop.index == 1 or forloop.index == 5 %}
+              {% include cloudinarylazy.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="900" sizes="40vw" modes="c_fill,e_sharpen" %}
+            {% else %}
+              {% include cloudinarylazy.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="600" sizes="40vw" modes="c_fill,e_sharpen" %}
+            {% endif %}
           </div>
           <div class="case-study--text">
             <h3 class="case-study--title">{{casestudy.title}}</h3>
