@@ -16,7 +16,7 @@
     flex-direction: row
     align-items: center
     .case-study--text
-      margin-left: $base-spacing
+      margin: $base-spacing
     .case-study--image
       flex: 0 0 calc(50% - #{$small-spacing})
   &:nth-child(3n)
@@ -41,6 +41,9 @@
   height: auto
 
 .case-study--title
+  font-size: modular-scale(3)
+
+.case-study--client
   margin-bottom: 0
   line-height: 1.5 * $base-spacing
   margin-top: $small-spacing

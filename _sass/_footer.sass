@@ -6,7 +6,7 @@
   justify-content: center
   align-items: center
   color: white
-  animation: hue-rotation 3s linear infinite
+  animation: hue-rotation 4s ease-in infinite
 
 .footer-heading
   font-size: modular-scale(5)
@@ -16,5 +16,37 @@
 @keyframes hue-rotation
   0%
     filter: hue-rotate(0)
+  25%
+    filter: hue-rotate(90deg)
+  50%
+    filter: hue-rotate(180deg)
+  75%
+    filter: hue-rotate(270deg)
   100%
     filter: hue-rotate(360deg)
+
+
+@keyframes hue-rotation-pulse
+  0%
+    filter: hue-rotate(0)
+    opacity: 1
+  12.5%
+    opacity: .75
+  25%
+    filter: hue-rotate(90deg)
+    opacity: 1
+  37.5%
+    opacity: .75
+  50%
+    filter: hue-rotate(180deg)
+    opacity: 1
+  62.5%
+    opacity: .75
+  75%
+    filter: hue-rotate(270deg)
+    opacity: 1
+  82.5%
+    opacity: .75
+  100%
+    filter: hue-rotate(360deg)
+    opacity: 1

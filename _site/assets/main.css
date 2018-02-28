@@ -65,7 +65,7 @@ html { font-size: 0.75em; }
 
 ::selection { background-color: #0BF9D7; color: white; }
 
-body { color: #000000; font-family: "Geomanist-LD"; font-size: 1rem; line-height: 1.6; -webkit-font-smoothing: subpixel-antialiased; letter-spacing: .02em; }
+body { color: #000000; font-family: "Geomanist-LD"; font-size: 1rem; line-height: 1.6; -webkit-font-smoothing: antialiased; letter-spacing: .02em; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "Geomanist-LD"; font-size: 1.25em; line-height: 1.4; margin: 0 0 0.8rem; font-weight: 700; letter-spacing: .025em; }
 
@@ -112,7 +112,7 @@ html.js-loading .section--hero { transform: translateY(100%); transition: none; 
 
 .case-study--item { flex: 0 0 calc(50% - 0.8rem); margin-right: 1.6rem; overflow: hidden; margin-bottom: 3.2rem; }
 .case-study--item:nth-child(4n-3) { flex: 0 0 100%; margin-right: 0; display: flex; background-color: #e3e3e3; flex-direction: row; align-items: center; }
-.case-study--item:nth-child(4n-3) .case-study--text { margin-left: 1.6rem; }
+.case-study--item:nth-child(4n-3) .case-study--text { margin: 1.6rem; }
 .case-study--item:nth-child(4n-3) .case-study--image { flex: 0 0 calc(50% - 0.8rem); }
 .case-study--item:nth-child(3n) { margin-right: 0; }
 @media screen and (min-width: 900px) { .case-study--item { flex: 0 0 calc(33.33% - 2.1328rem); margin-right: 3.2rem; }
@@ -121,18 +121,21 @@ html.js-loading .section--hero { transform: translateY(100%); transition: none; 
 
 .case-study--thumb { display: block; width: 100%; height: auto; }
 
-.case-study--title { margin-bottom: 0; line-height: 2.4rem; margin-top: 0.8rem; }
+.case-study--title { font-size: 1.953125em; }
+
+.case-study--client { margin-bottom: 0; line-height: 2.4rem; margin-top: 0.8rem; }
 
 .case-study-type { line-height: 1.6rem; }
 
-.section--team { padding-top: 9.6rem; padding-bottom: 9.6rem; background-image: linear-gradient(-45deg, #0BF9D7 30%, white 30.01%); }
-.section--team .container { display: flex; flex-direction: row; }
-.section--team .team--photo-container { flex: 0 0 40%; margin-right: 3.2rem; margin-left: 3.2rem; }
+.section--team { padding-top: 9.6rem; padding-bottom: 9.6rem; }
+.section--team .team--photo-container { flex: 0 0 50%; margin-top: -1.6rem; }
 .section--team .team--photo { display: block; height: auto; width: 100%; }
-.section--team .team--text-container { display: flex; flex-direction: column; }
-.section--team .team--text--heading { font-size: 3.0517578125em; font-weight: 700; text-align: right; margin-top: 3.2rem; margin-right: 3.2rem; text-transform: lowercase; }
-.section--team .team--text--people { margin-top: auto; margin-left: 3.2rem; }
-.section--team .team--text--people--title { font-size: 1.953125em; text-transform: lowercase; margin-bottom: 1.6rem; }
+.section--team .team--text-container:first-child { background-color: #E5F9F5; }
+.section--team .team--text--heading { font-size: 2.44140625em; line-height: 1.4; font-weight: 700; text-align: right; padding-top: 3.2rem; margin-bottom: 1.6rem; text-transform: lowercase; width: 70%; margin-left: auto; }
+.section--team .team--text--intro { width: 70%; border-left: 0.4rem solid #000000; padding-left: 1.6rem; padding-bottom: 1.6rem; }
+.section--team .team--text--people { display: flex; flex-direction: row; margin-top: auto; justify-content: space-between; }
+.section--team .team--text--people > div:first-child { padding-top: 1.6rem; padding-left: 1.6rem; padding-right: 1.6rem; padding-bottom: 1.6rem; margin-bottom: auto; flex: 1 1 auto; border-left: 0.4rem solid #000000; }
+.section--team .team--text--people--title { font-size: 1.953125em; line-height: 1; text-transform: lowercase; margin-bottom: 1.6rem; }
 .section--team .team--text--people--list .team--text--people--list--name { margin-bottom: 0; }
 .section--team .team--text--people--list li { margin-bottom: 1.6rem; }
 .section--team .team--text--people--list li:last-child, .section--team .team--text--people--list p:last-child { margin-bottom: 0; }
@@ -157,12 +160,24 @@ body.home .site-header { position: sticky; top: 0; bottom: auto; margin-top: -4v
   .site-nav .page-link { display: block; padding: 0.8rem 1.6rem; margin-left: 1.6rem; }
   .site-nav .page-link:not(:last-child) { margin-right: 0; } }
 
-.section--footer { height: 100vh; background-color: #FECDD3; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; animation: hue-rotation 3s linear infinite; }
+.section--footer { height: 100vh; background-color: #FECDD3; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; animation: hue-rotation 4s ease-in infinite; }
 
 .footer-heading { font-size: 3.0517578125em; text-transform: lowercase; }
 
 @keyframes hue-rotation { 0% { filter: hue-rotate(0); }
+  25% { filter: hue-rotate(90deg); }
+  50% { filter: hue-rotate(180deg); }
+  75% { filter: hue-rotate(270deg); }
   100% { filter: hue-rotate(360deg); } }
+@keyframes hue-rotation-pulse { 0% { filter: hue-rotate(0); opacity: 1; }
+  12.5% { opacity: 0.75; }
+  25% { filter: hue-rotate(90deg); opacity: 1; }
+  37.5% { opacity: 0.75; }
+  50% { filter: hue-rotate(180deg); opacity: 1; }
+  62.5% { opacity: 0.75; }
+  75% { filter: hue-rotate(270deg); opacity: 1; }
+  82.5% { opacity: 0.75; }
+  100% { filter: hue-rotate(360deg); opacity: 1; } }
 @font-face { font-family: "Tide Sans"; src: url("fonts/tidesans-500dudette-webfont.woff2") format("woff2"), url("fonts/tidesans-500dudette-webfont.woff") format("woff"); font-style: normal; font-weight: 500; }
 @font-face { font-family: "Geomanist-LD"; src: url("fonts/geomanist-regular-webfont.woff2") format("woff2"), url("fonts/geomanist-regular-webfont.woff") format("woff"); font-style: normal; font-weight: 400; }
 @font-face { font-family: "Geomanist-LD"; src: url("fonts/geomanist-bold-webfont.woff2") format("woff2"), url("fonts/geomanist-bold-webfont.woff") format("woff"); font-style: normal; font-weight: 700; }

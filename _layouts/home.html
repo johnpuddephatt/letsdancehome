@@ -36,17 +36,23 @@ layout: default
     <div class="case-study--container">
       {% for casestudy in site.casestudies %}
         <div class="case-study--item" data-aos="fade-up" data-aos-ratio=".25">
-          <div class="case-study--image">
-            {% if forloop.index == 1 or forloop.index == 5 %}
+          {% if forloop.index == 1 or forloop.index == 5 %}
+            <div class="case-study--image">
               {% include cloudinarylazy.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="900" sizes="40vw" modes="c_fill,e_sharpen" %}
-            {% else %}
+            </div>
+            <div class="case-study--text">
+              <h3 class="case-study--title">{{ casestudy.title }}</h3>
+              <div class="case-study--type">{{ casestudy.type }}</div>
+            </div>
+          {% else %}
+            <div class="case-study--image">
               {% include cloudinarylazy.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="600" sizes="40vw" modes="c_fill,e_sharpen" %}
-            {% endif %}
-          </div>
-          <div class="case-study--text">
-            <h3 class="case-study--title">{{casestudy.title}}</h3>
-            <div class="case-study--type">{{casestudy.type}}</div>
-          </div>
+            </div>
+            <div class="case-study--text">
+              <h3 class="case-study--client">{{ casestudy.client }}</h3>
+              <div class="case-study--type">{{ casestudy.type }}</div>
+            </div>
+          {% endif %}
         </div>
       {% endfor %}
     </div>
@@ -55,67 +61,36 @@ layout: default
 
 <section class="section--team">
   <div class="container">
-    <div class="team--photo-container">
-      {% include cloudinary.html class="team--photo" img="/assets/images/team.jpg" width="600" height="900" modes="c_fill,g_face,e_sharpen" quality="85" %}
+    <div class="team--text-container">
+      <div class="narrow-container">
+        <div class="team--text--heading">A small design agency helping people doing good in and around Leeds</div>
+        <div class="team--text--intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate magnam obcaecati magni, inventore pariatur illum modi dolorem nisi ab sunt, rem accusamus quibusdam dolorum quod voluptas similique sit omnis dolore.</div>
+      </div>
     </div>
     <div class="team--text-container">
-      <div class="team--text--heading">We help good people say good things</div>
-      <div class="team--text--people">
-        <h2 class="team--text--people--title">The team</h2>
-        <ul class="team--text--people--list">
-          <li>
-            <h3 class="team--text--people--list--name">Natalie Morton</h3>
-            <p>Branding, design, communication</p>
-          </li>
-          <li>
-            <h3 class="team--text--people--list--name">John Puddephatt</h3>
-            <p>Branding, digital, communication</p>
-          </li>
-          <li>
-            <h3 class="team--text--people--list--name">Ollie Jenkins</h3>
-            <p>Photography and videography</p>
-          </li>
-        </ul>
+      <div class="team--text--people narrow-container">
+        <div>
+          <h2 class="team--text--people--title">The team</h2>
+          <ul class="team--text--people--list">
+            <li>
+              <h3 class="team--text--people--list--name">Natalie Morton</h3>
+              <p>Branding, design, communication</p>
+            </li>
+            <li>
+              <h3 class="team--text--people--list--name">John Puddephatt</h3>
+              <p>Branding, digital, communication</p>
+            </li>
+            <li>
+              <h3 class="team--text--people--list--name">Ollie Jenkins</h3>
+              <p>Photography and videography</p>
+            </li>
+          </ul>
+        </div>
+        <div class="team--photo-container">
+          {% include cloudinary.html class="team--photo" img="/assets/images/team.jpg" width="600" height="900" modes="c_fill,g_face,e_sharpen" quality="85" %}
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-
-<section>
-  <ul class="container animated-list">
-    <li><h3>First</h3></li>
-    <li><h3>Second</h3></li>
-    <li><h3>Third</h3></li>
-    <li><h3>Fourth</h3></li>
-    <li><h3>Fifth</h3></li>
-  </ul>
-</section>
-
-<style>
-.animated-list {
-  display: flex;
-  flex-direction: column;
-}
-
-.animated-list li:nth-child(3) {
-  animation: test 3s infinite;
-}
-
-@keyframes test {
-  0% {
-    order: 0
-  }
-  25% {
-    order: 1
-  }
-  50% {
-    order: 3;
-    opacity: .5;
-
-  }
-
-}
-</style>
-
 {% include footer.html %}
