@@ -10,22 +10,8 @@
   flex: 0 0 calc(50% - #{$small-spacing})
   margin-right: $base-spacing
   counter-increment: section
-
-  &.large
-    flex: 0 0 100%
-    margin-right: 0
-    display: flex
-    background-color: $light-gray
-    flex-direction: row
-    align-items: center
-    .case-study--text
-      margin: $base-spacing 2 * $base-spacing
-      &::before
-        content: 'No.'counter(section)
-        font-size: modular-scale(4)
-        margin-bottom: 1.5 * $small-spacing
-    .case-study--image
-      flex: 0 0 calc(50% - #{$small-spacing})
+  overflow: hidden
+  margin-bottom: 2 * $base-spacing
   &:nth-child(3n)
     margin-right: 0
   @media screen and (min-width: $large-screen)
@@ -35,12 +21,23 @@
       margin-right: 2 * $base-spacing
     &:nth-child(4n)
       margin-right: 0
-  overflow: hidden
-  margin-bottom: 2 * $base-spacing
-  // &:nth-child(2n),&:nth-child(4n-1)
-  //   transition-delay: $base-duration
-  // &:nth-child(4n)
-  //   transition-delay: 0ms
+  &--large
+    flex: 0 0 100%
+    margin-right: 0
+    display: flex
+    background-color: $light-gray
+    flex-direction: row
+    align-items: center
+    .case-study--title
+      margin-bottom: 2 * $base-spacing
+    .case-study--text
+      margin: $base-spacing 2 * $base-spacing
+      &::before
+        content: 'No.'counter(section)
+        font-size: modular-scale(4)
+        margin-bottom: 1.5 * $small-spacing
+    .case-study--image
+      flex: 0 0 calc(50% - #{$small-spacing})
 
 .case-study--text
   &::before

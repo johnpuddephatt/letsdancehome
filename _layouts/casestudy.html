@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+
+<header class="casestudy--header">
+  <div class="casestudy--header--image">
+    <img src="{{ page.thumb }}" alt="">
+  </div>
+  <div class="casestudy--header--text">
+    <div class="casestudy--header--about">
+      <h1 class="casestudy--header--client">{{ page.client }}</h1>
+      <div class="casestudy--header--type">{{ page.type }}</div>
+    </div>
+    <div class="casestudy--header--intro">{{ page.intro }}</div>
+  </div>
+</header>
+
+
+{% for section in page.sections %}
+  <section class="casestudy--section casestudy--section  {{ section.background }}">
+    {% for block in section.blocks %}
+    <div class="block block--{{ block.type }} {{ block.background }}">
+      {% case block.type %}
+        {% when 'phone' %}
+          {% include iphone.html image=block.image %}
+        {% when 'image' %}
+          <img src="{{ block.image }}" alt="">
+        {% when 'image--full' %}
+          <img src="{{ block.image }}" alt="">
+        {% when 'text' %}
+          {{ block.text | markdownify }}
+        {% when 'laptop' %}
+          {% include laptop.html image=block.image %}
+        {% endcase %}
+      </div>
+    {% endfor %}
+  </section>
+{% endfor %}
