@@ -1,8 +1,9 @@
-.marvel-device{
+.marvel-device {
 	display: inline-block;
 	position: relative;
 	box-sizing: content-box !important;
 	margin: 0 auto;
+
 	.screen {
 		width: 100%;
 		position: relative;
@@ -13,6 +14,7 @@
 		display: block;
 		border-radius: 1px;
 		box-shadow: 0 0 0 3px #111;
+
 		> * {
 			position: absolute;
 			top: 0;
@@ -26,7 +28,8 @@
 		}
 	}
 
-	.top-bar, .bottom-bar {
+	.bottom-bar,
+	.top-bar {
 		height: 3px;
 		background: black;
 		width: 100%;
@@ -36,24 +39,27 @@
 	.middle-bar {
 		width: 3px;
 		height: 4px;
-		top: 0px;
+		top: 0;
 		left: 90px;
 		background: black;
 		position: absolute;
 	}
 
-	&.iphone8{
+	&.iphone8 {
 		width: 223px;
 		background: #d9dbdc;
 		border-radius: 13.2% / 6.3%;
-		box-shadow:inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 10px 10px 10px -10px rgba(0,0,0,.5);
+		box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 10px 10px 10px -10px rgba(0,0,0,.5);
+
 		.inner {
 			padding: 25% 5%;
 		}
+
 		.screen {
 			padding-top: 177%;
 		}
-		&:before{
+
+		&:before {
 			width: 96.8%;
 			height: 98%;
 			position: absolute;
@@ -65,7 +71,7 @@
 			z-index: 1;
 		}
 
-		&:after{
+		&:after {
 			width: 95.7%;
 			height: 97.6%;
 			position: absolute;
@@ -73,8 +79,7 @@
 			content: '';
 			left: 2.15%;
 			border-radius: 11.9% / 5.9%;
-			box-shadow:inset 0 0 3px 0 rgba(0, 0, 0, 0.1),
-			inset 0 0 6px 3px #FFFFFF;
+			box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.1), inset 0 0 6px 3px #FFFFFF;
 			z-index: 2;
 		}
 
@@ -90,7 +95,7 @@
 			background: rgb(48,50,51);
 			background: linear-gradient(135deg, rgba(48,50,51,1) 0%,rgba(181,183,185,1) 50%,rgba(240,242,242,1) 69%,rgba(48,50,51,1) 100%);
 
-			&:before{
+			&:before {
 				background: #f8f8f8;
 				position: absolute;
 				content: '';
@@ -102,7 +107,7 @@
 			}
 		}
 
-		.top-bar{
+		.top-bar {
 			height: 14px;
 			background: #bfbfc0;
 			position: absolute;
@@ -110,7 +115,7 @@
 			left: 0;
 		}
 
-		.bottom-bar{
+		.bottom-bar {
 			height: 14px;
 			background: #bfbfc0;
 			position: absolute;
@@ -118,24 +123,24 @@
 			left: 0;
 		}
 
-		.sleep{
+		.sleep {
 			position: absolute;
 			top: 21.7%;
 			left: 100%;
 			width: 4px;
 			height: 7.53%;
-			border-radius: 0px 2px 2px 0px;
+			border-radius: 0 2px 2px 0;
 			background: #bfbfc0;
 		}
 
-		.volume{
+		.volume {
 			position: absolute;
 			right: 100%;
 			top: 21.4%;
 			z-index: 0;
 			height: 7.53%;
 			width: 4px;
-			border-radius: 2px 0px 0px 2px;
+			border-radius: 2px 0 0 2px;
 			background: #d9dbdc;
 
 			&:before {
@@ -144,7 +149,7 @@
 				top: -118%;
 				height: 60.6%;
 				width: 2px;
-				border-radius: 2px 0px 0px 2px;
+				border-radius: 2px 0 0 2px;
 				background: inherit;
 				content: '';
 				display: block;
@@ -152,11 +157,11 @@
 
 			&:after {
 				position: absolute;
-				left: 0px;
+				left: 0;
 				top: 124%;
 				height: 100%;
 				width: 4px;
-				border-radius: 2px 0px 0px 2px;
+				border-radius: 2px 0 0 2px;
 				background: inherit;
 				content: '';
 				display: block;
@@ -189,7 +194,7 @@
 		.speaker {
 			background: #292728;
 			width: 16.5%;
-			height: .684%;
+			height: 0.684%;
 			position: absolute;
 			top: 6.16%;
 			left: 50%;
@@ -198,68 +203,69 @@
 			z-index: 3;
 		}
 
-		&.gold{
+		&.gold {
 			background: #f9e7d3;
 
-			.top-bar, .bottom-bar{
+			.bottom-bar,
+			.top-bar {
 				background: white;
 			}
 
-			.sleep, .volume{
+			.sleep,
+			.volume {
 				background: #f9e7d3;
 			}
 
-			.home{
+			.home {
 				background: rgb(206,187,169);
 				background: linear-gradient(135deg, rgba(206,187,169,1) 0%,rgba(249,231,211,1) 50%,rgba(206,187,169,1) 100%);
 			}
 		}
 
-		&.black{
+		&.black {
 			background: #464646;
 			box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.7);
 
-			&:before{
+			&:before {
 				background: #080808;
 			}
 
-			&:after{
-				box-shadow:
-					inset 0 0 3px 0 rgba(0, 0, 0, 0.1),
-					inset 0 0 6px 3px #212121;
+			&:after {
+				box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.1), inset 0 0 6px 3px #212121;
 			}
 
-			.top-bar, .bottom-bar{
+			.bottom-bar,
+			.top-bar {
 				background: #212121;
 			}
 
-			.volume, .sleep{
+			.sleep,
+			.volume {
 				background: #464646;
 			}
 
-			.camera{
+			.camera {
 				background: #080808;
 			}
 
-			.home{
+			.home {
 				background: rgb(8,8,8);
 				background: linear-gradient(135deg, rgba(8,8,8,1) 0%,rgba(70,70,70,1) 50%,rgba(8,8,8,1) 100%);
 
-				&:before{
+				&:before {
 					background: #080808;
 				}
 			}
-
 		}
 
-		&.landscape{
+		&.landscape {
 			padding: 24px 105px;
 			height: 375px;
 			width: 667px;
 
-			.sleep{
+			.sleep {
 				top: 100%;
-				border-radius: 0px 0px 2px 2px;
+				border-radius: 0 0 2px 2px;
 				right: 190px;
 				height: 4px;
 				width: 66px;
@@ -270,7 +276,7 @@
 				height: 4px;
 				top: -4px;
 				left: calc(100% - 188px - 66px);
-				border-radius: 2px 2px 0px 0px;
+				border-radius: 2px 2px 0 0;
 
 				&:before {
 					width: 40px;
@@ -278,33 +284,33 @@
 					top: 2px;
 					right: -78px;
 					left: auto;
-					border-radius: 2px 2px 0px 0px;
+					border-radius: 2px 2px 0 0;
 				}
 
-				&:after{
+				&:after {
 					left: -82px;
 					width: 66px;
 					height: 4px;
 					top: 0;
-					border-radius: 2px 2px 0px 0px;
+					border-radius: 2px 2px 0 0;
 				}
 			}
 
-			.top-bar{
+			.top-bar {
 				width: 14px;
 				height: 100%;
-				left: calc(100% - 68px -  14px);
+				left: calc(100% - 68px - 14px);
 				top: 0;
 			}
 
-			.bottom-bar{
+			.bottom-bar {
 				width: 14px;
 				height: 100%;
 				left: 68px;
 				top: 0;
 			}
 
-			.home{
+			.home {
 				top: 50%;
 				margin-top: -34px;
 				margin-left: 0;
@@ -321,27 +327,27 @@
 				width: 6px;
 				left: calc(100% - 54px - 6px);
 				top: 50%;
-				margin-left: 0px;
+				margin-left: 0;
 				margin-top: -35px;
 			}
 
 			.camera {
 				left: calc(100% - 32px);
 				top: 50%;
-				margin-left: 0px;
+				margin-left: 0;
 				margin-top: -5px;
 			}
 		}
 	}
 
-	&.ipad{
+	&.ipad {
 		width: 576px;
 		height: 768px;
 		padding: 90px 25px;
 		background: #242324;
 		border-radius: 44px;
 
-		&:before{
+		&:before {
 			width: calc(100% - 8px);
 			height: calc(100% - 8px);
 			position: absolute;
@@ -364,7 +370,8 @@
 			border-radius: 100%;
 		}
 
-		.top-bar, .bottom-bar{
+		.bottom-bar,
+		.top-bar {
 			display: none;
 		}
 
@@ -393,7 +400,7 @@
 			}
 		}
 
-		&.landscape{
+		&.landscape {
 			height: 576px;
 			width: 768px;
 			padding: 25px 90px;
@@ -413,18 +420,18 @@
 			}
 		}
 
-		&.silver{
+		&.silver {
 			background: #bcbcbc;
 
-			&:before{
+			&:before {
 				background: #fcfcfc;
 			}
 
-			.home{
+			.home {
 				background: #fcfcfc;
 				box-shadow: inset 0 0 0 1px #bcbcbc;
 
-				&:after{
+				&:after {
 					border: 1px solid rgba(0, 0, 0, 0.2);
 				}
 			}
@@ -432,15 +439,18 @@
 	}
 
 	&.macbook {
-		width: 40%;  //960px
+		width: 40%;
+		//960px
 		padding: 0;
 		margin: 0 auto;
 		background: #bebebe;
 		// border-radius: 34px;
 		border-radius: 3.54% / 5.67%;
+
 		.inner {
 			padding: 4.42% 4.58% 7.44%;
 		}
+
 		&:before {
 			width: calc(100% - 8px);
 			height: calc(100% - 8px);
@@ -456,7 +466,7 @@
 
 		.top-bar {
 			width: 114.58%;
-			height: 5.56%;//40px;
+			height: 5.86%; //40px;
 			position: absolute;
 			content: '';
 			display: block;
@@ -465,11 +475,11 @@
 			border-bottom-left-radius: 90px 18px;
 			border-bottom-right-radius: 90px 18px;
 			background: #bebebe;
-			box-shadow: inset 0px -4px 13px 3px rgba(34, 34, 34, 0.6);
+			box-shadow: inset 0 -4px 13px 3px rgba(34, 34, 34, 0.6);
 
 			&:before {
 				width: 100%;
-				height: 60%;//24px;
+				height: 60%; //24px;
 				content: '';
 				display: block;
 				top: 0;
@@ -482,7 +492,7 @@
 
 			&:after {
 				width: 16%;
-				height: 35%;//14px;
+				height: 35%; //14px;
 				content: '';
 				display: block;
 				top: 0;
@@ -493,28 +503,27 @@
 				left: 0;
 				right: 0;
 				border-radius: 0 0 20px 20px;
-				box-shadow: inset 0px -3px 10px #999;
+				box-shadow: inset 0 -3px 10px #999;
 			}
 		}
 
 		.bottom-bar {
 			background: transparent;
 			width: 114.58%;
-			height: 3.62%; //26px;
+			height: 4.62%; //26px;
 			position: absolute;
 			content: '';
 			display: block;
 			top: 100%;
 			left: -7.29%;
 
-			&:before,
-			&:after {
+			&:after,
+			&:before {
 				height: calc(100% - 2px);
 				width: 80px;
 				content: '';
 				display: block;
 				top: 0;
-
 				position: absolute;
 			}
 
@@ -552,7 +561,7 @@
 		height: 812px;
 		padding: 26px;
 		background: #fdfdfd;
-		box-shadow:inset 0 0 11px 0 black;
+		box-shadow: inset 0 0 11px 0 black;
 		border-radius: 66px;
 
 		.overflow {
@@ -593,7 +602,7 @@
 			right: -20px;
 		}
 
-		&:before{
+		&:before {
 			width: calc(100% - 10px);
 			height: calc(100% - 10px);
 			position: absolute;
@@ -605,7 +614,7 @@
 			z-index: 1;
 		}
 
-		.inner-shadow{
+		.inner-shadow {
 			width: calc(100% - 20px);
 			height: calc(100% - 20px);
 			position: absolute;
@@ -616,8 +625,8 @@
 			box-shadow: inset 0 0 15px 0 rgba(white, 0.66);
 			z-index: 1;
 
-			&:before{
-				box-shadow:inset 0 0 20px 0 #FFFFFF;
+			&:before {
+				box-shadow: inset 0 0 20px 0 #FFFFFF;
 				width: 100%;
 				height: 116%;
 				position: absolute;
@@ -634,7 +643,8 @@
 			box-shadow: none;
 		}
 
-		.top-bar, .bottom-bar {
+		.bottom-bar,
+		.top-bar {
 			width: 100%;
 			position: absolute;
 			height: 8px;
@@ -650,7 +660,10 @@
 			bottom: 80px;
 		}
 
-		.volume, .volume:before, .volume:after, .sleep {
+		.sleep,
+		.volume,
+		.volume:after,
+		.volume:before {
 			width: 3px;
 			background: #b5b5b5;
 			position: absolute;
@@ -712,15 +725,16 @@
 			z-index: 4;
 			background: black;
 			border-bottom-left-radius: 24px;
-		    border-bottom-right-radius: 24px;
+			border-bottom-right-radius: 24px;
 
-		    &:before, &:after {
+			&:after,
+			&:before {
 				content: '';
 				height: 8px;
 				position: absolute;
 				top: 0;
 				width: 8px;
-		    }
+			}
 
 			&:after {
 				background: radial-gradient(circle at bottom left, transparent 0, transparent 70%, black 70%, black 100%);
@@ -737,7 +751,8 @@
 			height: 375px;
 			width: 812px;
 
-			.top-bar, .bottom-bar {
+			.bottom-bar,
+			.top-bar {
 				width: 8px;
 				height: 100%;
 				top: 0;
@@ -753,7 +768,10 @@
 				left: auto;
 			}
 
-			.volume, .volume:before, .volume:after, .sleep {
+			.sleep,
+			.volume,
+			.volume:after,
+			.volume:before {
 				height: 3px;
 			}
 
@@ -813,10 +831,11 @@
 				bottom: 108px;
 				top: auto;
 				border-top-right-radius: 24px;
-			    border-bottom-right-radius: 24px;
-			    border-bottom-left-radius: 0;
+				border-bottom-right-radius: 24px;
+				border-bottom-left-radius: 0;
 
-				&:before, &:after {
+				&:after,
+				&:before {
 					left: 0;
 				}
 
@@ -833,5 +852,151 @@
 			}
 		}
 	}
+}
 
+.imac {
+	/* 	width: 450px; */
+	width: 80%;
+	max-width: 25 * $base-spacing;
+	perspective: 250px;
+	position: relative;
+
+	.screen {
+		position: relative;
+		background-size: cover;
+		box-sizing: border-box;
+		/* 	border: 24px solid black; */
+		padding: 5.33% 4% 4%;
+		background-color: black;
+		border-radius: 3%/5.06%;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+
+		.inner {
+			position: relative;
+			background-color: white;
+			padding-top: 56.25%;
+			width: 100%;
+		}
+
+		img {
+			position: absolute;
+			object-fit: cover;
+			object-position: center;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+
+	.chin {
+		width: 100%;
+		position: relative;
+		padding-top: 10.7%;
+		background: #dadada;
+		border-radius: 3%/23.17%;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	.stand {
+		margin: 0 auto;
+		width: 17.5%;
+		/* 	height: 100px; */
+		padding-top: 22.5%;
+		background: linear-gradient(to bottom, #b1b1b1, #EFEFEF);
+		border-radius: 12% / 15%;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		perspective-origin: 50% 50%;
+		transform-style: preserve-3d;
+		transform: rotatex(100deg);
+		margin-top: -10%;
+		box-shadow: inset 0 -8px 0 -4px #D5D5D5;
+		position: relative;
+		z-index: -99;
+	}
+}
+
+.block--print {
+	height: 100%;
+	width: 100%;
+	perspective: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	.image {
+		width: 22.5vw;
+		max-width: 55%;
+		@media (orientation: portrait) {
+			width: 60vw;
+		}
+		/*   overflow: hidden; */
+		position: relative;
+		&::before {
+			// content: '';
+			// position: absolute;
+			// top: 1em;
+			// left: -3em;
+			// bottom: 1em;
+			// width: 7em;
+			// background-color: rgba(50,50,50,.15);
+			// transform: rotate(12deg);
+			// filter: blur(1em);
+			content: '';
+	    position: absolute;
+	    top: 3em;
+	    left: -3em;
+	    bottom: 2em;
+	    width: 5em;
+	    background-color: rgba(50,50,50,.15);
+	    transform: rotate(34deg) skew(23deg,11deg);
+	    filter: blur(1em);
+		}
+
+		&::after {
+			content: '';
+			height: 1px;
+			background-color: rgba(50,50,50,.075);
+			display: block;
+			position: absolute;
+			top: 90%;
+			left: -99999px;
+			right: -99999px;
+			box-shadow: 0 5px 25px rgba(50,50,50,.75);
+		}
+	}
+	img {
+		background-color: #fff;
+		position: relative;
+		z-index: 9;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		display: block;
+		box-shadow: 0 3px 0 -1px rgba(50,50,50,.1);
+		transform: rotateX(1deg);
+		backface-visibility: hidden;
+	}
+}
+
+
+
+.block--poster {
+  align-items: center;
+  background-image: url('https://www.transparenttextures.com/patterns/clean-gray-paper.png'), linear-gradient(-30deg, #6d6f65, #dddfd5 60%, #dddfd5 80%, #adafa5);
+  display: flex;
+  justify-content: center;
+	img {
+		width: 22.5vw;
+		max-width: 55%;
+		@media (orientation: portrait) {
+			width: 60vw;
+		}
+	  box-shadow: -.25em .25em .75em rgba(50,50,50, 0.25), -1px 1px 0px 0px rgba(255,255,255,1);
+	}
 }

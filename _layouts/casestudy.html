@@ -24,6 +24,12 @@ layout: default
       {% case block.type %}
         {% when 'phone' %}
           {% include iphone.html image=block.image %}
+        {% when 'imac' %}
+          {% include imac.html image=block.image %}
+        {% when 'poster' %}
+          {% include poster.html image=block.image %}
+        {% when 'print' %}
+          {% include print.html image=block.image %}
         {% when 'image' %}
           <img src="{{ block.image }}" alt="">
         {% when 'image--full' %}

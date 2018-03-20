@@ -18,6 +18,12 @@ sections:
 - blocks:
   - type: phone
     image: /uploads/casestudies/iris-phone1.jpg
+  - type: print
+    image: '/uploads/casestudies/li.png'
+    background: pink
+- blocks:
+  - type: phone
+    image: /uploads/casestudies/iris-phone1.jpg
   - type: phone
     image: /uploads/casestudies/iris-phone2.jpg
   - type: phone
@@ -30,7 +36,7 @@ sections:
     image: /uploads/iris.jpg
   - type: phone
     image: /uploads/casestudies/iris-phone2.jpg
-    background: gray
+    background: green
 - blocks:
   - type: image--full
     image: /uploads/iris.jpg
@@ -72,6 +78,29 @@ sections:
       &mdash; John Puddephatt
 
 - blocks:
-  - type: laptop
+  - type: imac
     image: '/uploads/iris.jpg'
+- background: gray
+  blocks:
+  - type: imac
+    image: '/uploads/iris.jpg'
+- background: blue
+  blocks:
+  - type: print
+    image: '/uploads/casestudies/li.png'
+  - type: print
+    image: '/uploads/casestudies/li.png'
+  - type: print
+    image: '/uploads/casestudies/li.png'
+- background: green
+  blocks:
+  - type: print
+    image: '/uploads/casestudies/li.png'
+  - type: print
+    image: '/uploads/casestudies/li.png'
+- blocks:
+  - type: poster
+    image: '/uploads/casestudies/li.png'
+  - type: poster
+    image: '/uploads/casestudies/li.png'
 ---
