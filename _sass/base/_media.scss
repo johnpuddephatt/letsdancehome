@@ -15,6 +15,6 @@ picture {
   transition: opacity $base-duration;
 }
 
-.lazy-load[data-lazyload=lazyloaded] {
+.lazy-load[data-lazyload=loaded] {
   opacity: 1;
 }
