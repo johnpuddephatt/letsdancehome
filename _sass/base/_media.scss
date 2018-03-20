@@ -12,7 +12,7 @@ picture {
 
 .lazyload {
   opacity: 0;
-  transition: opacity $base-duration;
+  transition: opacity 4 * $base-duration;
 }
 
 .lazyload[data-lazyload=loaded] {

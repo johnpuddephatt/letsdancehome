@@ -31,9 +31,9 @@ layout: default
         {% when 'print' %}
           {% include print.html image=block.image %}
         {% when 'image' %}
-          <img src="{{ block.image }}" alt="">
+          <img src="{{ site.baseurl }}{{ block.image }}" alt="">
         {% when 'image--full' %}
-          <img src="{{ block.image }}" alt="">
+          <img src="{{ site.baseurl }}{{ block.image }}" alt="">
         {% when 'text' %}
           {{ block.text | markdownify }}
         {% when 'laptop' %}
