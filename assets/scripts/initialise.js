@@ -1,3 +1,11 @@
+document.addEventListener('scroll',function(){
+  if(document.documentElement.scrollTop > 10) {
+    document.documentElement.classList.add('scrolled');
+  }
+  else {
+    document.documentElement.classList.remove('scrolled');
+  }
+});
 
 
 document.addEventListener('DOMContentLoaded',function(){
@@ -13,8 +21,10 @@ document.addEventListener('DOMContentLoaded',function(){
       //   image.removeEventListener('load',imageLoaded());
       // });
       ldLoaded = true;
+      document.documentElement.scrollTop = -100;
       setTimeout(function(){
         document.documentElement.classList.remove('js-loading');
+        document.documentElement.scrollTop = -100;
         simpleslider.getSlider({
           container: document.getElementById('hero-image-slider'),
           prop: 'opacity',
@@ -27,8 +37,6 @@ document.addEventListener('DOMContentLoaded',function(){
       },4000);
     }
   }
-
-  document.documentElement.scrollTop = -100;
   document.documentElement.classList.add('js-loading');
   sliderImages.forEach(image => {
     image.addEventListener('load',imageLoaded(image));

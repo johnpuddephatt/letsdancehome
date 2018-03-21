@@ -7,8 +7,12 @@
   right: 0
   z-index: 999
   position: relative
+  html.scrolled &
+    a
+      color: black
   a
     color: white
+    transition: color $base-duration
   body.home &
     position: sticky
     top: 0
@@ -25,6 +29,10 @@
 .site-nav
   float: right
   color: white
+  transition: color $base-duration
+  html.scrolled &
+    color: black
+
   font-weight: 700
   .nav-trigger
       display: none
