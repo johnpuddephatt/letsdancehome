@@ -1,6 +1,7 @@
 ---
 title: A high-end homepage for a boutique fashion brand
 client: Iris
+date: 2018-01-04
 type: Website
 thumb: /uploads/iris.jpg
 intro: >

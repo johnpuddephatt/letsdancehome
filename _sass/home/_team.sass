@@ -1,11 +1,11 @@
 .section--team
   padding-top: 6 * $base-spacing
   padding-bottom: 6 * $base-spacing
-  .container
-
   .team--photo-container
     flex: 0 0 50%
-    margin-top: -$base-spacing
+    margin-top: -2 * $base-spacing
+    @media (orientation: landscape)
+      margin-top: -$base-spacing
   .team--photo
     display: block
     height: auto
@@ -16,39 +16,54 @@
     font-size: modular-scale(4)
     line-height: $heading-line-height
     font-weight: 700
-    text-align: right
+
     padding-top: 2 * $base-spacing
-    margin-bottom: $base-spacing
+    margin-bottom: 1.5 * $base-spacing
     text-transform: lowercase
-    width: 70%
     margin-left: auto
+    @media (orientation: landscape)
+      text-align: right
+      width: 75%
   .team--text--intro
-    width: 70%
-    border-left: $small-spacing/2 solid $base-font-color
-    padding-left: $base-spacing
-    padding-bottom: 1.5 * $base-spacing
+    @media (orientation: landscape)
+      width: 75%
+      border-left: $small-spacing/2 solid $base-font-color
+      padding-left: $base-spacing
+    padding-bottom: 2.5 * $base-spacing
   .team--text--people
     display: flex
-    flex-direction: row
-    margin-top: auto
-    justify-content: space-between
+    flex-direction: column
+    @media (orientation: landscape)
+      flex-direction: row
+      margin-top: auto
+      justify-content: space-between
     > div:first-child
-      padding-top: $base-spacing
-      padding-left: $base-spacing
-      padding-right: $base-spacing
-      padding-bottom: $base-spacing
-      margin-bottom: auto
-      flex: 1 1 auto
-      border-left: $small-spacing/2 solid $base-font-color
+      text-align: center
+      order: 2
+      padding: 2 * $base-spacing $base-spacing
+      background-color: $pink
+      margin: 2 * $base-spacing (-$base-spacing)
+      @media (orientation: landscape)
+        background-color: initial
+        order: 0
+        text-align: left
+        padding: $base-spacing $base-spacing 0
+        margin: 0 auto
+        flex: 1 1 auto
+        border-left: $small-spacing/2 solid $base-font-color
   .team--text--people--title
     font-size: modular-scale(3)
     line-height: 1
     text-transform: lowercase
     margin-bottom: $base-spacing
   .team--text--people--list
+    text-align: center
+    @media (orientation: landscape)
+      text-align: left
     .team--text--people--list--name
-      margin-bottom: 0
-    li
-      margin-bottom: $base-spacing
+      font-size: modular-scale(1)
+      font-weight: 700
+      text-transform: lowercase
+      margin-bottom: $small-spacing/2
     li:last-child, p:last-child
       margin-bottom: 0

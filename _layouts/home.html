@@ -34,30 +34,29 @@ layout: default
   <div class="container">
     <h2 class="sr-only">Case studies</h2>
     <div class="case-study--container">
-      {% for casestudy in site.casestudies %}
-        {% if forloop.index == 1 or forloop.index == 5 %}
+      {% assign casestudies = site.casestudies | order: 'date' %}
+      {% for casestudy in casestudies %}
+        {% if forloop.index == 1 or forloop.index == 5 or forloop.index == 9 %}
           <div class="case-study--item case-study--item--large" data-aos="fade-up" data-aos-ratio=".25">
             <div class="case-study--image">
-              {% include cloudinarylazy.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="900" sizes="40vw" modes="c_fill,e_sharpen" %}
+              {% include cloudinarylazy.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="600" sizes="40vw" modes="c_fill" %}
             </div>
             <div class="case-study--text">
               <h3 class="case-study--title">{{ casestudy.title }}</h3>
               <h3 class="case-study--client">{{ casestudy.client }}</h3>
               <div class="case-study--type">{{ casestudy.type }}</div>
               <!-- <a class="button" href="{{ casestudy.url }}">View</a> -->
-              <div class="case-study--coming-soon">Case study coming soon</div>
             </div>
           </div>
           {% else %}
           <div class="case-study--item" data-aos="fade-up" data-aos-ratio=".25">
             <div class="case-study--image">
-              {% include cloudinarylazy.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="600" sizes="40vw" modes="c_fill,e_sharpen" %}
+              {% include cloudinarylazy.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="600" sizes="40vw" modes="c_fill" %}
             </div>
             <div class="case-study--text">
               <h3 class="case-study--client">{{ casestudy.client }}</h3>
               <div class="case-study--type">{{ casestudy.type }}</div>
               <!-- <a class="button" href="{{ site.baseurl }}{{ casestudy.url }}">View</a> -->
-              <div class="case-study--coming-soon">Case study coming soon</div>
             </div>
           </div>
         {% endif %}
@@ -70,23 +69,25 @@ layout: default
   <div class="container">
     <div class="team--text-container">
       <div class="narrow-container">
-        <div class="team--text--heading">A small design agency helping people doing good in and around Leeds</div>
-        <div class="team--text--intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate magnam obcaecati magni, inventore pariatur illum modi dolorem nisi ab sunt, rem accusamus quibusdam dolorum quod voluptas similique sit omnis dolore.</div>
+        <div class="team--text--heading">In words or in pictures, in print or online, we love helping people get their message across.</div>
+        <div class="team--text--intro">
+          <p>We’re a small creative agency based in Leeds. Having worked with independents, social enterprises and charities, we know they’re the kind of people we like helping most. That means we don’t assume massive budgets, deliver jargon-filled pitches or make unethical choices.</p>
+          </div>
       </div>
     </div>
     <div class="team--text-container">
       <div class="team--text--people narrow-container">
         <div>
-          <h2 class="team--text--people--title">The team</h2>
+          <h2 class="team--text--people--title">What we do:</h2>
           <ul class="team--text--people--list">
-            <li>
-              <h3 class="team--text--people--list--name">Natalie Morton</h3>
-              <p>Branding, design, signage</p>
-            </li>
-            <li>
-              <h3 class="team--text--people--list--name">John Puddephatt</h3>
-              <p>Digital, communication, strategy</p>
-            </li>
+            <li class="team--text--people--list--name">Branding</li>
+            <li class="team--text--people--list--name">Web design</li>
+            <li class="team--text--people--list--name">Illustration</li>
+            <li class="team--text--people--list--name">Signage</li>
+            <li class="team--text--people--list--name">Campaigns</li>
+            <li class="team--text--people--list--name">Fundraising</li>
+            <li class="team--text--people--list--name">Social media</li>
+            <li class="team--text--people--list--name">Digital democracy</li>
           </ul>
         </div>
         <div class="team--photo-container" data-aos="fade-up" data-aos-ratio=".25">

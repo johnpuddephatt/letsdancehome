@@ -7,42 +7,57 @@
   counter-reset: section
 
 .case-study--item
-  flex: 0 0 calc(50% - #{$small-spacing})
-  margin-right: $base-spacing
+  flex: 0 0 100%
+
   counter-increment: section
   overflow: hidden
   margin-bottom: 2 * $base-spacing
-  &:nth-child(3n)
-    margin-right: 0
+  @media screen and (min-width: $medium-screen)
+    flex: 0 0 calc(50% - #{$small-spacing})
+    margin-right: $base-spacing
+    &:nth-child(2n)
+      margin-right: 0
   @media screen and (min-width: $large-screen)
     flex: 0 0 calc(33.33% - #{1.333 * $base-spacing})
     margin-right: 2 * $base-spacing
+    &:nth-child(2n)
+      margin-right: 2 * $base-spacing
+
     &:nth-child(3n)
       margin-right: 2 * $base-spacing
     &:nth-child(4n)
       margin-right: 0
   &--large
-    flex: 0 0 100%
     margin-right: 0
-    display: flex
-    background-color: $light-gray
-    flex-direction: row
-    align-items: center
     .case-study--title
-      margin-bottom: 2 * $base-spacing
-    .case-study--text
-      margin: $base-spacing 2 * $base-spacing
-      &::before
-        content: 'No.'counter(section)
-        font-size: modular-scale(4)
-        margin-bottom: 1.5 * $small-spacing
-    .case-study--image
+      display: none
+    @media screen and (min-width: $medium-screen)
+      margin-right: $base-spacing
       flex: 0 0 calc(50% - #{$small-spacing})
+    @media screen and (min-width: $large-screen)
+      margin-right: 0
+      flex: 0 0 100%
+      display: flex
+      background-color: $light-gray
+      flex-direction: row
+      align-items: center
+      .case-study--title
+        display: block
+        margin-bottom: 2 * $base-spacing
+      .case-study--text
+        margin: $base-spacing 2 * $base-spacing
+        &::before
+          content: 'No.'counter(section)
+          font-size: modular-scale(4)
+          margin-bottom: 1.5 * $small-spacing
+      .case-study--image
+        flex: 0 0 calc(50% - #{$small-spacing})
 
 .case-study--text
   &::before
     content: 'No.'counter(section)
-    font-size: modular-scale(1)
+    font-size: modular-scale(2)
+
     font-weight: 700
     border-bottom: .2em solid
     margin-top: $small-spacing
@@ -60,9 +75,19 @@
 .case-study--client
   margin-bottom: 0
   line-height: 1.5 * $base-spacing
+  display: inline-block
+  padding-left: $small-spacing/2
+  @media (min-width: $medium-screen)
+    display: block
+    padding-left: 0
 
-.case-study-type
+.case-study--type
   line-height: $base-spacing
+  display: inline-block
+  padding-left: $small-spacing/2
+  @media (min-width: $medium-screen)
+    display: block
+    padding-left: 0
 
 .case-study--coming-soon
   display: inline-block

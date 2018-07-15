@@ -95,55 +95,69 @@ html.js-loading .section--hero { transform: translateY(100%); transition: none; 
 html.scrolled .section--hero { opacity: 0; }
 .section--hero img { position: absolute; left: 0; top: 0; height: 100%; width: 100%; object-fit: cover; object-position: center; }
 
-.section--intro { min-height: 50vmax; width: 100%; display: flex; flex-direction: column; justify-content: center; margin-top: 4vmax; }
+.section--intro { height: 100vh; width: 100%; display: flex; flex-direction: column; justify-content: center; margin-top: 4vmax; }
 .section--intro > *:last-child { margin-bottom: 0; }
 .section--intro .intro--container { text-align: center; background-color: #E5F9F5; padding: 8vmax; position: relative; }
+@media (orientation: portrait) { .section--intro .intro--container { min-height: 88vh; display: flex; flex-direction: column; justify-content: center; } }
 
 .intro--title { font-size: 1.953125em; margin-bottom: 1.6rem; line-height: 1.6; margin-bottom: 0; }
 
 .case-study--container { display: flex; flex-wrap: wrap; padding-top: 3.2rem; padding-bottom: 3.2rem; counter-reset: section; }
 
-.case-study--item { flex: 0 0 calc(50% - 0.8rem); margin-right: 1.6rem; counter-increment: section; overflow: hidden; margin-bottom: 3.2rem; }
-.case-study--item:nth-child(3n) { margin-right: 0; }
+.case-study--item { flex: 0 0 100%; counter-increment: section; overflow: hidden; margin-bottom: 3.2rem; }
+@media screen and (min-width: 600px) { .case-study--item { flex: 0 0 calc(50% - 0.8rem); margin-right: 1.6rem; }
+  .case-study--item:nth-child(2n) { margin-right: 0; } }
 @media screen and (min-width: 900px) { .case-study--item { flex: 0 0 calc(33.33% - 2.1328rem); margin-right: 3.2rem; }
+  .case-study--item:nth-child(2n) { margin-right: 3.2rem; }
   .case-study--item:nth-child(3n) { margin-right: 3.2rem; }
   .case-study--item:nth-child(4n) { margin-right: 0; } }
-.case-study--item--large { flex: 0 0 100%; margin-right: 0; display: flex; background-color: #e3e3e3; flex-direction: row; align-items: center; }
-.case-study--item--large .case-study--title { margin-bottom: 3.2rem; }
-.case-study--item--large .case-study--text { margin: 1.6rem 3.2rem; }
-.case-study--item--large .case-study--text::before { content: "No." counter(section); font-size: 2.44140625em; margin-bottom: 1.2rem; }
-.case-study--item--large .case-study--image { flex: 0 0 calc(50% - 0.8rem); }
+.case-study--item--large { margin-right: 0; }
+.case-study--item--large .case-study--title { display: none; }
+@media screen and (min-width: 600px) { .case-study--item--large { margin-right: 1.6rem; flex: 0 0 calc(50% - 0.8rem); } }
+@media screen and (min-width: 900px) { .case-study--item--large { margin-right: 0; flex: 0 0 100%; display: flex; background-color: #e3e3e3; flex-direction: row; align-items: center; }
+  .case-study--item--large .case-study--title { display: block; margin-bottom: 3.2rem; }
+  .case-study--item--large .case-study--text { margin: 1.6rem 3.2rem; }
+  .case-study--item--large .case-study--text::before { content: "No." counter(section); font-size: 2.44140625em; margin-bottom: 1.2rem; }
+  .case-study--item--large .case-study--image { flex: 0 0 calc(50% - 0.8rem); } }
 
-.case-study--text::before { content: "No." counter(section); font-size: 1.25em; font-weight: 700; border-bottom: 0.2em solid; margin-top: 0.8rem; margin-bottom: 0.4rem; display: inline-block; }
+.case-study--text::before { content: "No." counter(section); font-size: 1.5625em; font-weight: 700; border-bottom: 0.2em solid; margin-top: 0.8rem; margin-bottom: 0.4rem; display: inline-block; }
 
 .case-study--thumb { display: block; width: 100%; height: auto; }
 
 .case-study--title { font-size: 1.953125em; }
 
-.case-study--client { margin-bottom: 0; line-height: 2.4rem; }
+.case-study--client { margin-bottom: 0; line-height: 2.4rem; display: inline-block; padding-left: 0.4rem; }
+@media (min-width: 600px) { .case-study--client { display: block; padding-left: 0; } }
 
-.case-study-type { line-height: 1.6rem; }
+.case-study--type { line-height: 1.6rem; display: inline-block; padding-left: 0.4rem; }
+@media (min-width: 600px) { .case-study--type { display: block; padding-left: 0; } }
 
 .case-study--coming-soon { display: inline-block; padding: 0.2rem 0.4rem; border: 0.15em solid #999; margin-top: 0.8rem; color: #999; font-size: 0.8em; }
 
 .section--team { padding-top: 9.6rem; padding-bottom: 9.6rem; }
-.section--team .team--photo-container { flex: 0 0 50%; margin-top: -1.6rem; }
+.section--team .team--photo-container { flex: 0 0 50%; margin-top: -3.2rem; }
+@media (orientation: landscape) { .section--team .team--photo-container { margin-top: -1.6rem; } }
 .section--team .team--photo { display: block; height: auto; width: 100%; }
 .section--team .team--text-container:first-child { background-color: #E5F9F5; }
-.section--team .team--text--heading { font-size: 2.44140625em; line-height: 1.3; font-weight: 700; text-align: right; padding-top: 3.2rem; margin-bottom: 1.6rem; text-transform: lowercase; width: 70%; margin-left: auto; }
-.section--team .team--text--intro { width: 70%; border-left: 0.4rem solid #000000; padding-left: 1.6rem; padding-bottom: 2.4rem; }
-.section--team .team--text--people { display: flex; flex-direction: row; margin-top: auto; justify-content: space-between; }
-.section--team .team--text--people > div:first-child { padding-top: 1.6rem; padding-left: 1.6rem; padding-right: 1.6rem; padding-bottom: 1.6rem; margin-bottom: auto; flex: 1 1 auto; border-left: 0.4rem solid #000000; }
+.section--team .team--text--heading { font-size: 2.44140625em; line-height: 1.3; font-weight: 700; padding-top: 3.2rem; margin-bottom: 2.4rem; text-transform: lowercase; margin-left: auto; }
+@media (orientation: landscape) { .section--team .team--text--heading { text-align: right; width: 75%; } }
+.section--team .team--text--intro { padding-bottom: 4rem; }
+@media (orientation: landscape) { .section--team .team--text--intro { width: 75%; border-left: 0.4rem solid #000000; padding-left: 1.6rem; } }
+.section--team .team--text--people { display: flex; flex-direction: column; }
+@media (orientation: landscape) { .section--team .team--text--people { flex-direction: row; margin-top: auto; justify-content: space-between; } }
+.section--team .team--text--people > div:first-child { text-align: center; order: 2; padding: 3.2rem 1.6rem; background-color: #FECDD3; margin: 3.2rem -1.6rem; }
+@media (orientation: landscape) { .section--team .team--text--people > div:first-child { background-color: initial; order: 0; text-align: left; padding: 1.6rem 1.6rem 0; margin: 0 auto; flex: 1 1 auto; border-left: 0.4rem solid #000000; } }
 .section--team .team--text--people--title { font-size: 1.953125em; line-height: 1; text-transform: lowercase; margin-bottom: 1.6rem; }
-.section--team .team--text--people--list .team--text--people--list--name { margin-bottom: 0; }
-.section--team .team--text--people--list li { margin-bottom: 1.6rem; }
+.section--team .team--text--people--list { text-align: center; }
+@media (orientation: landscape) { .section--team .team--text--people--list { text-align: left; } }
+.section--team .team--text--people--list .team--text--people--list--name { font-size: 1.25em; font-weight: 700; text-transform: lowercase; margin-bottom: 0.4rem; }
 .section--team .team--text--people--list li:last-child, .section--team .team--text--people--list p:last-child { margin-bottom: 0; }
 
 .site-header { height: 6vmax; line-height: 6vmax; padding: 0 4vmax 0; left: 0; bottom: 0; right: 0; z-index: 999; position: relative; }
 html.scrolled .site-header a { color: black; }
 .site-header a { color: white; transition: color 150ms; }
 body.home .site-header { position: sticky; top: 0; bottom: auto; margin-top: -6vmax; }
-.site-header .site-title { font-size: 1.5625em; text-transform: lowercase; font-family: "Tide Sans"; -webkit-font-smoothing: antialiased; letter-spacing: 0; font-weight: 700; }
+.site-header .site-title { font-size: 1.5625em; font-family: "Tide Sans LD"; -webkit-font-smoothing: antialiased; letter-spacing: 0; font-weight: 700; }
 
 .site-nav { float: right; color: white; transition: color 150ms; font-weight: 700; }
 html.scrolled .site-nav { color: black; }
@@ -161,11 +175,12 @@ html.scrolled .site-nav { color: black; }
   .site-nav .page-link { display: block; padding: 0.8rem 1.6rem; margin-left: 1.6rem; }
   .site-nav .page-link:not(:last-child) { margin-right: 0; } }
 
-.section--footer { height: 100vh; background-color: #FECDD3; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; animation: hue-rotation 4s ease-in infinite; }
+.section--footer { height: 100vh; background-color: #FECDD3; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; animation: hue-rotation 4s ease-in infinite; text-align: center; padding: 0 8vmax; }
 
 .footer-heading { font-size: 3.0517578125em; text-transform: lowercase; }
 
-.footer-email { font-size: 1.953125em; font-weight: 700; color: white; }
+.footer-email { font-size: 1.5625em; font-weight: 700; color: white; }
+.footer-email:hover { color: white; text-decoration: underline; }
 
 @keyframes hue-rotation { 0% { filter: hue-rotate(0); }
   25% { filter: hue-rotate(90deg); }
@@ -181,7 +196,7 @@ html.scrolled .site-nav { color: black; }
   75% { filter: hue-rotate(270deg); opacity: 1; }
   82.5% { opacity: 0.75; }
   100% { filter: hue-rotate(360deg); opacity: 1; } }
-@font-face { font-family: "Tide Sans"; src: url("fonts/tidesans-500dudette-webfont.woff2") format("woff2"), url("fonts/tidesans-500dudette-webfont.woff") format("woff"); font-style: normal; font-weight: 500; }
+@font-face { font-family: "Tide Sans LD"; src: url("fonts/tidesans-500dudette-webfont.woff2") format("woff2"), url("fonts/tidesans-500dudette-webfont.woff") format("woff"); font-style: normal; font-weight: 500; }
 @font-face { font-family: "Geomanist-LD"; src: url("fonts/geomanist-regular-webfont.woff2") format("woff2"), url("fonts/geomanist-regular-webfont.woff") format("woff"); font-style: normal; font-weight: 400; }
 @font-face { font-family: "Geomanist-LD"; src: url("fonts/geomanist-bold-webfont.woff2") format("woff2"), url("fonts/geomanist-bold-webfont.woff") format("woff"); font-style: normal; font-weight: 700; }
 @media screen and (min-width: 600px) { body.aos [data-aos][data-aos][data-aos-duration="50"], body.aos[data-aos-duration="50"] [data-aos] { transition-duration: 50ms, 0ms; transition-delay: 0ms, 50ms; }
