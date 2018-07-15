@@ -90,14 +90,14 @@ html.js-loading .section--loading { transform: translateY(0%); transition: trans
 .loading-message { font-family: "Geomanist-LD"; font-weight: 700; color: white; line-height: 1.3; transform: translateY(-500%); transition: 1000ms; }
 html.js-loading .loading-message { transform: translateY(0%); transition: 1000ms; }
 
-.section--hero { height: 100vh; overflow: hidden; position: relative; transition: 1s; }
+.section--hero { height: 100vh; overflow: hidden; position: relative; transition: transform 900ms, opacity 450ms; }
 html.js-loading .section--hero { transform: translateY(100%); transition: none; }
 html.scrolled .section--hero { opacity: 0; }
 .section--hero img { position: absolute; left: 0; top: 0; height: 100%; width: 100%; object-fit: cover; object-position: center; }
 
-.section--intro { min-height: 50vmax; width: 100%; display: flex; flex-direction: column; justify-content: center; }
+.section--intro { min-height: 50vmax; width: 100%; display: flex; flex-direction: column; justify-content: center; margin-top: 4vmax; }
 .section--intro > *:last-child { margin-bottom: 0; }
-.section--intro .intro--container { text-align: center; background-color: #E5F9F5; padding: 6.4rem 6.4rem; position: relative; }
+.section--intro .intro--container { text-align: center; background-color: #E5F9F5; padding: 8vmax; position: relative; }
 
 .intro--title { font-size: 1.953125em; margin-bottom: 1.6rem; line-height: 1.6; margin-bottom: 0; }
 
@@ -124,12 +124,14 @@ html.scrolled .section--hero { opacity: 0; }
 
 .case-study-type { line-height: 1.6rem; }
 
+.case-study--coming-soon { display: inline-block; padding: 0.2rem 0.4rem; border: 0.15em solid #999; margin-top: 0.8rem; color: #999; font-size: 0.8em; }
+
 .section--team { padding-top: 9.6rem; padding-bottom: 9.6rem; }
 .section--team .team--photo-container { flex: 0 0 50%; margin-top: -1.6rem; }
 .section--team .team--photo { display: block; height: auto; width: 100%; }
 .section--team .team--text-container:first-child { background-color: #E5F9F5; }
 .section--team .team--text--heading { font-size: 2.44140625em; line-height: 1.3; font-weight: 700; text-align: right; padding-top: 3.2rem; margin-bottom: 1.6rem; text-transform: lowercase; width: 70%; margin-left: auto; }
-.section--team .team--text--intro { width: 70%; border-left: 0.4rem solid #000000; padding-left: 1.6rem; padding-bottom: 1.6rem; }
+.section--team .team--text--intro { width: 70%; border-left: 0.4rem solid #000000; padding-left: 1.6rem; padding-bottom: 2.4rem; }
 .section--team .team--text--people { display: flex; flex-direction: row; margin-top: auto; justify-content: space-between; }
 .section--team .team--text--people > div:first-child { padding-top: 1.6rem; padding-left: 1.6rem; padding-right: 1.6rem; padding-bottom: 1.6rem; margin-bottom: auto; flex: 1 1 auto; border-left: 0.4rem solid #000000; }
 .section--team .team--text--people--title { font-size: 1.953125em; line-height: 1; text-transform: lowercase; margin-bottom: 1.6rem; }
@@ -137,10 +139,10 @@ html.scrolled .section--hero { opacity: 0; }
 .section--team .team--text--people--list li { margin-bottom: 1.6rem; }
 .section--team .team--text--people--list li:last-child, .section--team .team--text--people--list p:last-child { margin-bottom: 0; }
 
-.site-header { height: 4vmax; line-height: 4vmax; padding: 0 4vmax 0; left: 0; bottom: 0; right: 0; z-index: 999; position: relative; }
+.site-header { height: 6vmax; line-height: 6vmax; padding: 0 4vmax 0; left: 0; bottom: 0; right: 0; z-index: 999; position: relative; }
 html.scrolled .site-header a { color: black; }
 .site-header a { color: white; transition: color 150ms; }
-body.home .site-header { position: sticky; top: 0; bottom: auto; margin-top: -4vmax; }
+body.home .site-header { position: sticky; top: 0; bottom: auto; margin-top: -6vmax; }
 .site-header .site-title { font-size: 1.5625em; text-transform: lowercase; font-family: "Tide Sans"; -webkit-font-smoothing: antialiased; letter-spacing: 0; font-weight: 700; }
 
 .site-nav { float: right; color: white; transition: color 150ms; font-weight: 700; }
@@ -150,7 +152,7 @@ html.scrolled .site-nav { color: black; }
 .site-nav label[for="nav-trigger"] { margin-bottom: 0; }
 .site-nav .page-link { color: #000000; line-height: 1.6; }
 .site-nav .page-link:not(:last-child) { margin-right: 20px; }
-@media screen and (max-width: 600px) { .site-nav { right: 0.8rem; background-color: transparent; border: 0.15rem solid white; border-radius: 50%; text-align: right; }
+@media screen and (max-width: 600px) { .site-nav { right: 0.8rem; background-color: transparent; text-align: right; }
   .site-nav label[for="nav-trigger"] { display: block; float: right; width: 3.2rem; height: 3.2rem; z-index: 2; cursor: pointer; }
   .site-nav .menu-icon { display: block; float: right; width: 3.2rem; height: 3.2rem; line-height: 0; padding-top: 0.8rem; text-align: center; }
   .site-nav .menu-icon > svg path { fill: white; }
@@ -162,6 +164,8 @@ html.scrolled .site-nav { color: black; }
 .section--footer { height: 100vh; background-color: #FECDD3; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; animation: hue-rotation 4s ease-in infinite; }
 
 .footer-heading { font-size: 3.0517578125em; text-transform: lowercase; }
+
+.footer-email { font-size: 1.953125em; font-weight: 700; color: white; }
 
 @keyframes hue-rotation { 0% { filter: hue-rotate(0); }
   25% { filter: hue-rotate(90deg); }
@@ -442,7 +446,7 @@ html.scrolled .site-nav { color: black; }
 .block--print .image::after { content: ''; height: 1px; background-color: rgba(50, 50, 50, 0.075); display: block; position: absolute; top: 90%; left: -99999px; right: -99999px; box-shadow: 0 5px 25px rgba(50, 50, 50, 0.75); }
 .block--print img { background-color: #fff; position: relative; z-index: 9; width: 100%; height: auto; margin: 0 auto; display: block; box-shadow: 0 3px 0 -1px rgba(50, 50, 50, 0.1); transform: rotateX(1deg); backface-visibility: hidden; }
 
-.block--poster { align-items: center; background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png"), linear-gradient(-30deg, #4d4f45, #bdbfb5 60%, #9d9f95 80%, #adafa5); display: flex; justify-content: center; }
+.block--poster { align-items: center; background-image: url("../assets/images/clean-gray-paper.png"), linear-gradient(-30deg, #7d7f75, #bdbfb5 60%, #adafa5); display: flex; justify-content: center; }
 .block--poster img { width: 22.5vw; max-width: 55%; box-shadow: -0.25em 0.25em 0.75em rgba(50, 50, 50, 0.25), -1px 1px 0px 0px white; }
 @media (orientation: portrait) { .block--poster img { width: 60vw; } }
 
