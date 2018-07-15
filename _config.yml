@@ -17,8 +17,8 @@ title: Let’s Dance
 email: john@jdp.org.uk
 description: |
   We help good people say good things
-baseurl: "/letsdancehome" # the subpath of your site, e.g. /blog
-url: "http://blog.letsdance.agency" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "http://letsdance.agency" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: letsdanceagency
 cloudinary: letsdance
 header_pages:
