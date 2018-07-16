@@ -73,7 +73,7 @@ html { font-size: 0.75em; }
 
 body { color: #000000; font-family: "Geomanist-LD"; font-size: 1rem; line-height: 1.6; -webkit-font-smoothing: antialiased; letter-spacing: .02em; }
 
-h1, h2, h3, h4, h5, h6 { font-family: "Geomanist-LD"; font-size: 1.25em; line-height: 1.3; margin: 0 0 0.8rem; font-weight: 700; letter-spacing: .025em; }
+h1, h2, h3, h4, h5, h6 { font-family: "Geomanist-LD"; font-size: 1.25em; line-height: 1.25; margin: 0 0 0.8rem; font-weight: 700; letter-spacing: .025em; }
 
 p { margin: 0 0 0.8rem; }
 
@@ -91,7 +91,7 @@ html.js-loading body { overflow: hidden; pointer-events: none; height: 100%; }
 @media (orientation: landscape) { .section--loading { font-size: 3.0517578125em; } }
 html.js-loading .section--loading { transform: translateY(0%); transition: transform 1000ms; }
 
-.loading-message { font-family: "Geomanist-LD"; font-weight: 700; color: white; line-height: 1.3; transform: translateY(-500%); transition: 1000ms; }
+.loading-message { font-family: "Geomanist-LD"; font-weight: 700; color: white; line-height: 1.25; transform: translateY(-500%); transition: 1000ms; }
 html.js-loading .loading-message { transform: translateY(0%); transition: 1000ms; }
 
 .section--hero { height: 100vh; overflow: hidden; position: relative; transition: transform 900ms, opacity 450ms; }
@@ -145,7 +145,7 @@ html.scrolled .section--hero { opacity: 0; }
 @media (orientation: landscape) { .section--team .team--photo-container { margin-top: -1.6rem; } }
 .section--team .team--photo { display: block; height: auto; width: 100%; }
 .section--team .team--text-container:first-child { background-color: #E5F9F5; }
-.section--team .team--text--heading { font-size: 2.44140625em; line-height: 1.3; font-weight: 700; padding-top: 3.2rem; margin-bottom: 2.4rem; margin-left: auto; }
+.section--team .team--text--heading { font-size: 2.44140625em; line-height: 1.25; font-weight: 700; padding-top: 3.2rem; margin-bottom: 2.4rem; margin-left: auto; }
 @media (orientation: landscape) { .section--team .team--text--heading { text-align: right; width: 75%; } }
 .section--team .team--text--intro { padding-bottom: 4rem; }
 @media (orientation: landscape) { .section--team .team--text--intro { width: 75%; border-left: 0.4rem solid #000000; padding-left: 1.6rem; } }
@@ -516,7 +516,7 @@ html.scrolled .site-nav { color: black; }
 
 .block--print:nth-child(3) { z-index: 7; }
 
-.block--text { display: flex; align-items: center; justify-content: center; flex-direction: column; font-size: 3.0517578125em; line-height: 1.3; font-weight: 700; text-align: center; padding: 3.2rem; }
+.block--text { display: flex; align-items: center; justify-content: center; flex-direction: column; font-size: 3.0517578125em; line-height: 1.25; font-weight: 700; text-align: center; padding: 3.2rem; }
 .block--text > *:last-child { font-weight: 400; font-size: 0.4096em; margin-top: 0.8rem; }
 .block--text > *:last-child::first-letter { color: #e3e3e3; }
 
