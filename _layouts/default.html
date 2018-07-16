@@ -61,7 +61,7 @@
 
             var aosObserver = new IntersectionObserver(aosCallback, aosOptions);
 
-            aos.forEach(image => {
+            aos.forEach(function(image) {
               aosObserver.observe(image);
             });
 
