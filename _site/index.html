@@ -329,7 +329,7 @@
             var aos = document.querySelectorAll("[data-aos]");
 
             var aosCallback =  function(entries, observer) {
-              entries.forEach(entry => {
+              entries.forEach(function(entry) {
                 if(entry.intersectionRatio >= 0 && entry.target.classList.contains('lazyload')) {
                   entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
                   entry.target.classList.remove('lazyload');
@@ -356,12 +356,11 @@
 
 
             var lazyloadCallback =  function(entries, observer) {
-              entries.forEach(entry => {
+              entries.forEach(function(entry) {
                 if(entry.intersectionRatio > 0 && (entry.target.getAttribute('data-lazyload') != 'loaded')) {
                   if(entry.target.getAttribute('data-srcset')) {
                     entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
                   }
-                  console.log(entry.target);
                   entry.target.setAttribute('data-lazyload','loaded');
                 }
               });
@@ -370,8 +369,7 @@
             var lazyloadObserver = new IntersectionObserver(lazyloadCallback, lazyloadOptions);
 
             var lazyload = document.querySelectorAll("[data-lazyload]");
-            console.log(lazyload);
-            lazyload.forEach(image => {
+            lazyload.forEach(function(image) {
               lazyloadObserver.observe(image);
             });
 
@@ -380,10 +378,12 @@
           }
           else {
             // @todo: trigger lazy load switch now as no intersection observer exists!
-            console.log('intersection observer not available.');
-            lazyload.forEach(image => {
-              image.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
-              image.setAttribute('data-lazyload',false);
+            var lazyload = document.querySelectorAll("[data-lazyload]");
+
+            lazyload.forEach(function(image) {
+              image.setAttribute('srcset',image.getAttribute('data-srcset'));
+              image.removeAttribute('data-lazyload');
+              image.classList.remove('lazyload');
             });
           }
         });

@@ -137,8 +137,8 @@ html.scrolled .section--hero { opacity: 0; }
 
 .case-study--coming-soon { display: inline-block; padding: 0.2rem 0.4rem; border: 0.15em solid #999; margin-top: 0.8rem; color: #999; font-size: 0.8em; }
 
-.section--team { padding-top: 3.2rem; padding-bottom: 3.2rem; }
-@media (orientation: landscape) { .section--team { padding-bottom: 6.4rem; } }
+.section--team { padding-top: 0; padding-bottom: 3.2rem; }
+@media (orientation: landscape) { .section--team { padding-top: 3.2rem; padding-bottom: 6.4rem; } }
 @media (min-width: 900px) { .section--team { padding-top: 6.4rem; padding-bottom: 9.6rem; } }
 .section--team .team--photo-container { flex: 0 0 60%; margin-top: -3.2rem; }
 @media (orientation: landscape) { .section--team .team--photo-container { margin-top: -1.6rem; } }
