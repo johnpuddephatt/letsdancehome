@@ -70,7 +70,6 @@
               rootMargin: '30px 30px'
             };
 
-            var lazyload = document.querySelectorAll("[data-lazyload]");
 
             var lazyloadCallback =  function(entries, observer) {
               entries.forEach(entry => {
@@ -86,6 +85,8 @@
 
             var lazyloadObserver = new IntersectionObserver(lazyloadCallback, lazyloadOptions);
 
+            var lazyload = document.querySelectorAll("[data-lazyload]");
+            console.log(lazyload);
             lazyload.forEach(image => {
               lazyloadObserver.observe(image);
             });
