@@ -105,7 +105,7 @@ html.scrolled .section--hero { opacity: 0; }
 .case-study--container { display: flex; flex-wrap: wrap; padding-top: 3.2rem; padding-bottom: 3.2rem; counter-reset: section; }
 
 .case-study--item { flex: 0 0 100%; counter-increment: section; overflow: hidden; margin-bottom: 3.2rem; }
-@media screen and (min-width: 600px) { .case-study--item { flex: 0 0 calc(50% - 0.8rem); margin-right: 1.6rem; }
+@media screen and (orientation: landscape) { .case-study--item { flex: 0 0 calc(50% - 0.8rem); margin-right: 1.6rem; }
   .case-study--item:nth-child(2n) { margin-right: 0; } }
 @media screen and (min-width: 900px) { .case-study--item { flex: 0 0 calc(33.33% - 2.1328rem); margin-right: 3.2rem; }
   .case-study--item:nth-child(2n) { margin-right: 3.2rem; }
@@ -113,7 +113,7 @@ html.scrolled .section--hero { opacity: 0; }
   .case-study--item:nth-child(4n) { margin-right: 0; } }
 .case-study--item--large { margin-right: 0; }
 .case-study--item--large .case-study--title { display: none; }
-@media screen and (min-width: 600px) { .case-study--item--large { margin-right: 1.6rem; flex: 0 0 calc(50% - 0.8rem); } }
+@media screen and (orientation: landscape) { .case-study--item--large { margin-right: 1.6rem; flex: 0 0 calc(50% - 0.8rem); } }
 @media screen and (min-width: 900px) { .case-study--item--large { margin-right: 0; flex: 0 0 100%; display: flex; background-color: #e3e3e3; flex-direction: row; align-items: center; }
   .case-study--item--large .case-study--title { display: block; margin-bottom: 3.2rem; }
   .case-study--item--large .case-study--text { margin: 1.6rem 3.2rem; }
@@ -127,10 +127,10 @@ html.scrolled .section--hero { opacity: 0; }
 .case-study--title { font-size: 1.953125em; }
 
 .case-study--client { margin-bottom: 0; line-height: 2.4rem; display: inline-block; padding-left: 0.4rem; }
-@media (min-width: 600px) { .case-study--client { display: block; padding-left: 0; } }
+@media screen and (orientation: landscape) { .case-study--client { display: block; padding-left: 0; } }
 
 .case-study--type { line-height: 1.6rem; display: inline-block; padding-left: 0.4rem; }
-@media (min-width: 600px) { .case-study--type { display: block; padding-left: 0; } }
+@media screen and (orientation: landscape) { .case-study--type { display: block; padding-left: 0; } }
 
 .case-study--coming-soon { display: inline-block; padding: 0.2rem 0.4rem; border: 0.15em solid #999; margin-top: 0.8rem; color: #999; font-size: 0.8em; }
 
@@ -153,10 +153,10 @@ html.scrolled .section--hero { opacity: 0; }
 .section--team .team--text--people--list .team--text--people--list--name { font-size: 1.25em; font-weight: 700; text-transform: lowercase; margin-bottom: 0.4rem; }
 .section--team .team--text--people--list li:last-child, .section--team .team--text--people--list p:last-child { margin-bottom: 0; }
 
-.site-header { height: 6vmax; line-height: 6vmax; padding: 0 4vmax 0; left: 0; bottom: 0; right: 0; z-index: 999; position: relative; }
+.site-header { height: 6vmax; line-height: 6vmax; padding: 0 4vmax; left: 0; bottom: 0; right: 0; z-index: 999; position: relative; }
 html.scrolled .site-header a { color: black; }
 .site-header a { color: white; transition: color 150ms; }
-body.home .site-header { position: sticky; top: 0; bottom: auto; margin-top: -6vmax; }
+body.home .site-header { top: 0; bottom: auto; margin-top: -6vmax; }
 .site-header .site-title { font-size: 1.5625em; font-family: "Tide Sans LD"; -webkit-font-smoothing: antialiased; letter-spacing: 0; font-weight: 700; }
 
 .site-nav { float: right; color: white; transition: color 150ms; font-weight: 700; }
