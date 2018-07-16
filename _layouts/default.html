@@ -77,7 +77,6 @@
                   if(entry.target.getAttribute('data-srcset')) {
                     entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
                   }
-                  console.log(entry.target);
                   entry.target.setAttribute('data-lazyload','loaded');
                 }
               });
@@ -86,7 +85,6 @@
             var lazyloadObserver = new IntersectionObserver(lazyloadCallback, lazyloadOptions);
 
             var lazyload = document.querySelectorAll("[data-lazyload]");
-            console.log(lazyload);
             lazyload.forEach(function(image) {
               lazyloadObserver.observe(image);
             });
@@ -96,10 +94,10 @@
           }
           else {
             // @todo: trigger lazy load switch now as no intersection observer exists!
-            console.log('intersection observer not available.');
             lazyload.forEach(image => {
               image.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
-              image.setAttribute('data-lazyload',false);
+              image.removeAttribute('data-lazyload');
+              image.classList.remove('lazyload');
             });
           }
         });
