@@ -1,7 +1,9 @@
 .site-header
   height: 6vmax
   line-height: 6vmax
-  padding: 0 4vmax
+  padding: 0 3vmax
+  @media (min-width: $medium-screen)
+    padding: 0 4vmax
   left: 0
   bottom: 0
   right: 0
@@ -24,6 +26,9 @@
     -webkit-font-smoothing: antialiased
     letter-spacing: 0
     font-weight: 700
+
+.trigger
+  font-size: modular-scale(-1)
 
 .site-nav
   float: right
