@@ -72,7 +72,7 @@
 
 
             var lazyloadCallback =  function(entries, observer) {
-              entries.forEach(entry => {
+              entries.forEach(function(entry) {
                 if(entry.intersectionRatio > 0 && (entry.target.getAttribute('data-lazyload') != 'loaded')) {
                   if(entry.target.getAttribute('data-srcset')) {
                     entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
@@ -87,7 +87,7 @@
 
             var lazyload = document.querySelectorAll("[data-lazyload]");
             console.log(lazyload);
-            lazyload.forEach(image => {
+            lazyload.forEach(function(image) {
               lazyloadObserver.observe(image);
             });
 
