@@ -94,6 +94,8 @@
           }
           else {
             // @todo: trigger lazy load switch now as no intersection observer exists!
+            var lazyload = document.querySelectorAll("[data-lazyload]");
+
             lazyload.forEach(function(image) {
               image.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
               image.removeAttribute('data-lazyload');
