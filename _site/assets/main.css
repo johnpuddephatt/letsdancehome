@@ -84,7 +84,8 @@ hr { border-bottom: 1px solid #e3e3e3; border-left: 0; border-right: 0; border-t
 
 .sr-only { visibility: hidden; height: 0; overflow: hidden; max-height: 0; }
 
-html.js-loading { overflow: hidden; }
+html.js-loading { overflow: hidden; pointer-events: none; position: relative; }
+html.js-loading body { overflow: hidden; pointer-events: none; height: 100%; }
 
 .section--loading { position: fixed; z-index: 99999; background-color: #FECDD3; text-align: center; font-size: 2.44140625em; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; transform: translateY(-100%); transition: transform 1000ms; animation: hue-rotation 3s linear infinite; }
 @media (orientation: landscape) { .section--loading { font-size: 3.0517578125em; } }
