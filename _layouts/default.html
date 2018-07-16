@@ -45,7 +45,7 @@
             var aos = document.querySelectorAll("[data-aos]");
 
             var aosCallback =  function(entries, observer) {
-              entries.forEach(entry => {
+              entries.forEach(function(entry) {
                 if(entry.intersectionRatio >= 0 && entry.target.classList.contains('lazyload')) {
                   entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
                   entry.target.classList.remove('lazyload');
