@@ -1,5 +1,5 @@
 ---
 title: Canopy
 image: canopy.jpg
-position: center right
+position: 88% center
 ---
