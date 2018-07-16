@@ -94,7 +94,7 @@
           }
           else {
             // @todo: trigger lazy load switch now as no intersection observer exists!
-            lazyload.forEach(image => {
+            lazyload.forEach(function(image) {
               image.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
               image.removeAttribute('data-lazyload');
               image.classList.remove('lazyload');
