@@ -185,7 +185,7 @@ html.scrolled .site-nav { color: black; }
   .site-nav .page-link { display: block; padding: 0.8rem 1.6rem; margin-left: 1.6rem; }
   .site-nav .page-link:not(:last-child) { margin-right: 0; } }
 
-.section--footer { height: 100vh; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 0 8vmax; }
+.section--footer { height: 100vh; background-color: #B9AAF1; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 0 8vmax; }
 .section--footer::after { content: ""; position: absolute; z-index: 1; top: 0; background-color: #B9AAF1; left: 0; right: 0; bottom: 0; animation: huerotation 3s linear infinite; }
 
 .footer-heading { font-size: 3.0517578125em; position: relative; z-index: 9; text-transform: lowercase; }
