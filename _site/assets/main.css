@@ -187,18 +187,14 @@ html.scrolled .site-nav { color: black; }
 
 .footer-outer { background-color: #FECDD3; }
 
-.section--footer { height: 100vh; position: relative; background-color: #FECDD3; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; filter: hue-rotate(0deg); animation: hue-rotation 3s linear infinite; text-align: center; padding: 0 8vmax; }
+.section--footer { height: 100vh; position: relative; background-color: #FECDD3; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; filter: hue-rotate(0deg); animation: huerotation 3s linear infinite; text-align: center; padding: 0 8vmax; }
 
 .footer-heading { font-size: 3.0517578125em; text-transform: lowercase; }
 
 .footer-email { font-size: 1.5625em; font-weight: 700; color: white; }
 .footer-email:hover { color: white; text-decoration: underline; }
 
-@keyframes hue-rotation { 0% { filter: hue-rotate(0deg); }
-  25% { filter: hue-rotate(90deg); }
-  50% { filter: hue-rotate(180deg); }
-  75% { filter: hue-rotate(270deg); }
-  100% { filter: hue-rotate(360deg); } }
+@keyframes huerotation { 0% { opacity: 0.5; } }
 @font-face { font-family: "Tide Sans LD"; src: url("fonts/tidesans-500dudette-webfont.woff2") format("woff2"), url("fonts/tidesans-500dudette-webfont.woff") format("woff"); font-style: normal; font-weight: 500; }
 @font-face { font-family: "Geomanist-LD"; src: url("fonts/geomanist-regular-webfont.woff2") format("woff2"), url("fonts/geomanist-regular-webfont.woff") format("woff"); font-style: normal; font-weight: 400; }
 @font-face { font-family: "Geomanist-LD"; src: url("fonts/geomanist-bold-webfont.woff2") format("woff2"), url("fonts/geomanist-bold-webfont.woff") format("woff"); font-style: normal; font-weight: 700; }
