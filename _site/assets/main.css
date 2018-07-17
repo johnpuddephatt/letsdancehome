@@ -185,6 +185,8 @@ html.scrolled .site-nav { color: black; }
   .site-nav .page-link { display: block; padding: 0.8rem 1.6rem; margin-left: 1.6rem; }
   .site-nav .page-link:not(:last-child) { margin-right: 0; } }
 
+.footer-outer { background-color: #FECDD3; }
+
 .section--footer { height: 100vh; position: relative; background-color: #FECDD3; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; filter: hue-rotate(0deg); animation: hue-rotation 3s linear infinite; text-align: center; padding: 0 8vmax; }
 
 .footer-heading { font-size: 3.0517578125em; text-transform: lowercase; }
