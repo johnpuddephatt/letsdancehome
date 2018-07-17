@@ -1,26 +1,33 @@
-.footer-outer
-  background-color: $color2
-
-
 .section--footer
   height: 100vh
   position: relative
-  z-index: 99
-  background-color: $color2
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
   color: white
-  filter: hue-rotate(0deg)
-  animation: huerotation 3s linear infinite
   text-align: center
   padding: 0 8vmax
+  &::after
+    content: ''
+    position: absolute
+    z-index: 1
+    top: 0
+    background-color: $color1
+    left: 0
+    right: 0
+    bottom: 0
+    animation: huerotation 3s linear infinite
+
 .footer-heading
   font-size: modular-scale(5)
+  position: relative
+  z-index: 9
   text-transform: lowercase
 
 .footer-email
+  position: relative
+  z-index: 9
   font-size: modular-scale(2)
   font-weight: 700
   color: white
@@ -30,13 +37,12 @@
 
 @keyframes huerotation
   0%
-    // filter: hue-rotate(0deg)
-    opacity: .5
+    filter: hue-rotate(0deg)
   25%
-    // filter: hue-rotate(90deg)
+    filter: hue-rotate(90deg)
   50%
-    // filter: hue-rotate(180deg)
+    filter: hue-rotate(180deg)
   75%
-    // filter: hue-rotate(270deg)
+    filter: hue-rotate(270deg)
   100%
-    // filter: hue-rotate(360deg)
+    filter: hue-rotate(360deg)
