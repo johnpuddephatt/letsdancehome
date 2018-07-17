@@ -167,6 +167,7 @@ body.home .site-header { top: 0; bottom: auto; margin-top: -6vmax; }
 .site-header .site-title { font-size: 1.5625em; font-family: "Tide Sans LD"; -webkit-font-smoothing: antialiased; letter-spacing: 0; font-weight: 700; }
 
 .trigger { font-size: 0.8em; }
+@media (orientation: landscape) { .trigger { font-size: 1em; } }
 
 .site-nav { float: right; color: white; transition: color 150ms; font-weight: 700; }
 html.scrolled .site-nav { color: black; }
@@ -184,7 +185,7 @@ html.scrolled .site-nav { color: black; }
   .site-nav .page-link { display: block; padding: 0.8rem 1.6rem; margin-left: 1.6rem; }
   .site-nav .page-link:not(:last-child) { margin-right: 0; } }
 
-.section--footer { height: 100vh; background-color: #FECDD3; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; animation: hue-rotation 4s ease-in infinite; text-align: center; padding: 0 8vmax; }
+.section--footer { height: 100vh; position: relative; background-color: #FECDD3; border: 5px solid black; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 0 8vmax; }
 
 .footer-heading { font-size: 3.0517578125em; text-transform: lowercase; }
 
