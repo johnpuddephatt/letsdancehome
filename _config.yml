@@ -18,7 +18,7 @@ email: john@jdp.org.uk
 description: |
   We help good people say good things
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://letsdance.agency" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.letsdance.agency" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: letsdanceagency
 cloudinary: letsdance
 header_pages:
