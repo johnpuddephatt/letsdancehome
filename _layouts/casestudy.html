@@ -33,7 +33,7 @@ layout: default
         {% when 'print' %}
           {% include print.html image=block.image.src %}
         {% when 'image' %}
-          {% include image.html image=block.image.src width=block.image.width height="20" modes=block.image.modes %}
+          {% include image.html image=block.image.src width=block.image.width height=block.image.height modes=block.image.modes %}
         {% when 'image--full' %}
           {% include image.html image=block.image.src %}
         {% when 'text' %}

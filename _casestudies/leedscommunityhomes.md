@@ -75,7 +75,7 @@ sections:
     image:
       src: '/assets/images/lch/tote.svg'
       width: 500
-      height: auto
+      height: 100
       modes: c_fit
 - height: full-height
   blocks:
