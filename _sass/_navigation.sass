@@ -1,9 +1,11 @@
 .site-header
-  height: 6vmax
-  line-height: 6vmax
+  height: 8vmax
+  line-height: 8vmax
   padding: 0 3vmax
   @media (min-width: $medium-screen)
     padding: 0 4vmax
+    height: 6vmax
+    line-height: 6vmax
   left: 0
   bottom: 0
   right: 0
@@ -15,7 +17,7 @@
     // position: sticky
     top: 0
     bottom: auto
-    margin-top: -6vmax
+    margin-top: -8vmax
     a
       color: white
       transition: color $base-duration
@@ -30,9 +32,14 @@
     font-weight: 700
 
 .trigger
-  font-size: modular-scale(-1)
+  font-size: modular-scale(0)
+  color: $medium-gray
+  body.home &
+    color: $light-gray
+  letter-spacing: 0.05em
   @media (orientation: landscape)
-    font-size: modular-scale(0)
+    font-size: modular-scale(1)
+    letter-spacing: 0
 .site-nav
   float: right
   body.home &

@@ -3,15 +3,18 @@
 .casestudy--header
   display: flex
   flex-direction: column
-  margin: 0 4vmax
-  // min-height: calc(100vh)
+  margin: 0 3vmax
+  @media screen and (min-width: $medium-screen)
+    margin: 0 4vmax
 
 .casestudy--header--image
   background-color: $light-gray
   position: relative
   display: block
   flex: 1 0 auto
-  height: calc(100vh - 13vmax)
+  height: calc(100vw - 13vmax)
+  @media screen and (orientation: landscape)
+    height: calc(100vh - 13vmax)
   img
     position: absolute
     height: 100%
@@ -24,8 +27,9 @@
 .casestudy--header--text
   flex: 0 0 auto
   margin: 4vmax 0 0
-  display: flex
-  flex-direction: row
+  @media screen and (orientation: landscape)
+    display: flex
+    flex-direction: row
 
 .casestudy--header--about
   flex: 0 0 33%
@@ -36,16 +40,23 @@
   color: $medium-gray
   font-weight: 500
   text-transform: lowercase
+  margin-bottom: $base-spacing
+  @media screen and (orientation: landscape)
+    margin-bottom: 0
+
 
 .casestudy--header--intro
   flex: 0 1 67%
-  columns: 2
-  column-gap: 4vmax
-  padding-left: 2vmax
+  @media screen and (orientation: landscape)
+    columns: 2
+    column-gap: 4vmax
+    padding-left: 2vmax
 
 
 .casestudy--section
-  margin: 4vmax
+  margin: 3vmax
+  @media screen and (min-width: $medium-screen)
+    margin: 4vmax
   display: flex
   align-items: center
   justify-content: center
@@ -63,6 +74,8 @@
     padding: 18vh 18vw
   &.full-height
     height: calc(100vh - 8vmax)
+    @media screen and (orientation: portrait)
+      height: calc(100vw - 8vmax)
   &:last-child
     margin-bottom: 4vmax
   &.gray

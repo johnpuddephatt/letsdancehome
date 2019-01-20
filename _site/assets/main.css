@@ -159,16 +159,17 @@ html.scrolled .section--hero { opacity: 0; }
 .section--team .team--text--people--list .team--text--people--list--name { font-size: 1.25em; font-weight: 700; text-transform: lowercase; margin-bottom: 0.4rem; }
 .section--team .team--text--people--list li:last-child, .section--team .team--text--people--list p:last-child { margin-bottom: 0; }
 
-.site-header { height: 6vmax; line-height: 6vmax; padding: 0 3vmax; left: 0; bottom: 0; right: 0; z-index: 999; position: relative; }
-@media (min-width: 600px) { .site-header { padding: 0 4vmax; } }
+.site-header { height: 8vmax; line-height: 8vmax; padding: 0 3vmax; left: 0; bottom: 0; right: 0; z-index: 999; position: relative; }
+@media (min-width: 600px) { .site-header { padding: 0 4vmax; height: 6vmax; line-height: 6vmax; } }
 .site-header a { color: black; }
-body.home .site-header { top: 0; bottom: auto; margin-top: -6vmax; }
+body.home .site-header { top: 0; bottom: auto; margin-top: -8vmax; }
 body.home .site-header a { color: white; transition: color 150ms; }
 html.scrolled .site-header a { color: black !important; }
 .site-header .site-title { font-size: 1.5625em; font-family: "Tide Sans LD"; -webkit-font-smoothing: antialiased; letter-spacing: 0; font-weight: 700; }
 
-.trigger { font-size: 0.8em; }
-@media (orientation: landscape) { .trigger { font-size: 1em; } }
+.trigger { font-size: 1em; color: #999; letter-spacing: 0.05em; }
+body.home .trigger { color: #e3e3e3; }
+@media (orientation: landscape) { .trigger { font-size: 1.25em; letter-spacing: 0; } }
 
 .site-nav { float: right; font-weight: 700; }
 body.home .site-nav { color: white; transition: color 150ms; }
@@ -594,27 +595,34 @@ html.scrolled .site-nav { color: black !important; }
 @media (orientation: portrait) { .block--poster img { width: 60vw; } }
 
 /* Header */
-.casestudy--header { display: flex; flex-direction: column; margin: 0 4vmax; }
+.casestudy--header { display: flex; flex-direction: column; margin: 0 3vmax; }
+@media screen and (min-width: 600px) { .casestudy--header { margin: 0 4vmax; } }
 
-.casestudy--header--image { background-color: #e3e3e3; position: relative; display: block; flex: 1 0 auto; height: calc(100vh - 13vmax); }
+.casestudy--header--image { background-color: #e3e3e3; position: relative; display: block; flex: 1 0 auto; height: calc(100vw - 13vmax); }
+@media screen and (orientation: landscape) { .casestudy--header--image { height: calc(100vh - 13vmax); } }
 .casestudy--header--image img { position: absolute; height: 100%; width: 100%; object-fit: cover; }
 
 .casestudy--header--client { font-size: 1.5625em; }
 
-.casestudy--header--text { flex: 0 0 auto; margin: 4vmax 0 0; display: flex; flex-direction: row; }
+.casestudy--header--text { flex: 0 0 auto; margin: 4vmax 0 0; }
+@media screen and (orientation: landscape) { .casestudy--header--text { display: flex; flex-direction: row; } }
 
 .casestudy--header--about { flex: 0 0 33%; padding-right: 2vmax; }
 
-.casestudy--header--type { font-size: 1.25em; color: #999; font-weight: 500; text-transform: lowercase; }
+.casestudy--header--type { font-size: 1.25em; color: #999; font-weight: 500; text-transform: lowercase; margin-bottom: 1.6rem; }
+@media screen and (orientation: landscape) { .casestudy--header--type { margin-bottom: 0; } }
 
-.casestudy--header--intro { flex: 0 1 67%; columns: 2; column-gap: 4vmax; padding-left: 2vmax; }
+.casestudy--header--intro { flex: 0 1 67%; }
+@media screen and (orientation: landscape) { .casestudy--header--intro { columns: 2; column-gap: 4vmax; padding-left: 2vmax; } }
 
-.casestudy--section { margin: 4vmax; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.casestudy--section { margin: 3vmax; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+@media screen and (min-width: 600px) { .casestudy--section { margin: 4vmax; } }
 html.debug .casestudy--section { background-clip: content-box; background-image: linear-gradient(45deg, #dddddd 2.38%, rgba(255, 255, 255, 0.2) 2.38%, rgba(255, 255, 255, 0.2) 50%, #dddddd 50%, #dddddd 52.38%, rgba(255, 255, 255, 0.2) 52.38%, rgba(255, 255, 255, 0.2) 100%); background-size: 29.7px 29.7px; outline: 1px solid black; }
 .casestudy--section.padding-medium { padding: 6vh 6vw; }
 .casestudy--section.padding-large { padding: 12vh 12vw; }
 .casestudy--section.padding-xl { padding: 18vh 18vw; }
 .casestudy--section.full-height { height: calc(100vh - 8vmax); }
+@media screen and (orientation: portrait) { .casestudy--section.full-height { height: calc(100vw - 8vmax); } }
 .casestudy--section:last-child { margin-bottom: 4vmax; }
 .casestudy--section.gray { background-color: #e3e3e3; color: white; }
 .casestudy--section.blue { background-color: #B1E3DD; }
