@@ -1,15 +1,12 @@
-<?xml version="1.0" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="179.5" height="206" viewBox="0 0 179.5 206">
-  <style><![CDATA[
-    .spin {
-    animation: spin 5s infinite linear;
-    transform-origin: 89.7px 72.2px;
-    }
-    @keyframes spin {
-      to {
-      transform: rotate(360deg);
-      }
-    }
-    ]]>
-</style>
-<circle fill="#F0C125" stroke="#000" stroke-width="3.422" stroke-miterlimit="10" cx="89.7" cy="116.2" r="88"/><path fill="#F0C125" stroke="#000" stroke-width="3.422" stroke-miterlimit="10" d="M14.5 162h150.4"/><path fill="#FFF" stroke="#000" stroke-width="3.422" stroke-miterlimit="10" d="M89.4 1.7c10.1 0 8.5 62.2 8.5 62.2H81.5S80.2 1.7 90 1.7M29 108.1c-5.2-8.7 49-39.2 49-39.2L86.4 83s-52.7 33-57.7 24.6M150.5 108.1c5.2-8.7-49-39.2-49-39.2L93.1 83s52.7 33 57.7 24.6"/><circle fill="#FFF" stroke="#000" stroke-width="3.422" stroke-miterlimit="10" cx="89.7" cy="72.2" r="11.9"/><path fill="#FFF" stroke="#000" stroke-width="3.422" stroke-miterlimit="10" d="M95.3 84.5l6.1 87.5H77.8l6.1-87.5"/><path fill="#F0C125" stroke="#000" stroke-width="3.422" stroke-miterlimit="10" d="M22.4 172h135.3M31.3 182h116.3M45 192.1h89.4"/><path fill="none" stroke="#000" stroke-width="3.422" stroke-linejoin="round" stroke-miterlimit="10" d="M81.3 122.6c-12.5-6.4-29.4-5.2-41.1 15.4 0 0-24.7-11.1-29.5 15.6M169.2 152.1c-2.3-4.8-7.5-11.1-17.6-6.9-.1-13.6-25.9-30.8-40.4-5.3 0 0-6.7-3-12.6-.7"/></svg>
+  <style>
+    <![CDATA[.spin{animation:spin 5s infinite linear;transform-origin:89.7px 72.2px}@keyframes spin{to{transform:rotate(360deg)}}]]>
+  </style>
+  <circle fill="#F0C125" stroke="#000" stroke-width="3.422" stroke-miterlimit="10" cx="89.7" cy="116.2" r="88"/>
+  <path fill="#F0C125" stroke="#000" stroke-width="3.422" stroke-miterlimit="10" d="M14.5 162h150.4"/>
+  <path fill="#FFF" stroke="#000" stroke-width="3.422" stroke-miterlimit="10" d="M95.3 84.5l6.1 87.5H77.8l6.1-87.5"/>
+  <path fill="#F0C125" stroke="#000" stroke-width="3.422" stroke-miterlimit="10" d="M22.4 172h135.3M31.3 182h116.3M45 192.1h89.4"/>
+  <path fill="none" stroke="#000" stroke-width="3.422" stroke-linejoin="round" stroke-miterlimit="10" d="M81.3 122.6c-12.5-6.4-29.4-5.2-41.1 15.4 0 0-24.7-11.1-29.5 15.6m158.5-1.5c-2.3-4.8-7.5-11.1-17.6-6.9-.1-13.6-25.9-30.8-40.4-5.3 0 0-6.7-3-12.6-.7"/>
+  <path fill="#FFF" stroke="#000" stroke-width="3.422" stroke-miterlimit="10" d="M89.4 1.7c10.1 0 8.5 62.2 8.5 62.2H81.5S80.2 1.7 90 1.7M29 108.1c-5.2-8.7 49-39.2 49-39.2L86.4 83s-52.7 33-57.7 24.6m121.8.5c5.2-8.7-49-39.2-49-39.2L93.1 83s52.7 33 57.7 24.6"/>
+  <circle fill="#FFF" stroke="#000" stroke-width="3.422" stroke-miterlimit="10" cx="89.7" cy="72.2" r="11.9"/>
+</svg>
