@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="179.5" height="206" viewBox="0 0 179.5 206">
-  <style>.spin {
+  <style><![CDATA[
+    .spin {
     animation: spin 5s infinite linear;
     transform-origin: 89.7px 72.2px;
     }
@@ -8,6 +9,7 @@
       transform: rotate(360deg);
       }
     }
+    ]]>
   </style>
   <circle fill="#F0C125" stroke="#000" stroke-width="3.422" stroke-miterlimit="10" cx="89.7" cy="116.2" r="88"/>
   <path fill="#F0C125" stroke="#000" stroke-width="3.422" stroke-miterlimit="10" d="M14.5 162h150.4"/>
