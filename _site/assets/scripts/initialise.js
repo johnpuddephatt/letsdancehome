@@ -1,14 +1,18 @@
 document.addEventListener('scroll',function(){
-  if(document.documentElement.scrollTop > 10) {
-    document.documentElement.classList.add('scrolled');
-  }
-  else {
+  var scrolled = false;
+  if(document.documentElement.scrollTop < 10 ) {
     document.documentElement.classList.remove('scrolled');
+    scrolled = false;
+  }
+  else if(!scrolled) {
+    document.documentElement.classList.add('scrolled');
+    scrolled = true;
   }
 });
 
 
 document.addEventListener('DOMContentLoaded',function(){
+
   var sliderImagesLoaded = 0;
   var sliderImages = document.querySelectorAll('#hero-image-slider img');
   var ldLoaded = false;
@@ -42,4 +46,3 @@ document.addEventListener('DOMContentLoaded',function(){
     image.addEventListener('load',imageLoaded(image));
   });
 });
-

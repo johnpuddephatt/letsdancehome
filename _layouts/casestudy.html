@@ -10,7 +10,9 @@ layout: default
   <div class="casestudy--header--text">
     <div class="casestudy--header--about">
       <h1 class="casestudy--header--client">{{ page.client }}</h1>
-      <div class="casestudy--header--type">{{ page.type }}</div>
+      <ul class="casestudy--header--type">{% for area in page.areas %}
+        <li>{{ area }}</li>
+      {% endfor %}</ul>
     </div>
     <div class="casestudy--header--intro">{{ page.intro }}</div>
   </div>
@@ -18,22 +20,22 @@ layout: default
 
 
 {% for section in page.sections %}
-  <section class="casestudy--section casestudy--section  {{ section.background }}">
+  <section class="casestudy--section {{section.height}} {% if section.padding %}padding-{{section.padding}}{% endif %} {{ section.background }}">
     {% for block in section.blocks %}
-    <div class="block block--{{ block.type }} {{ block.background }}">
+    <div class="block block--{{ block.type }} {{ block.background }}" {% if block.animate.direction %}data-aos="{{ block.animate.direction }}"{% endif %} {% if block.animate.delay %}data-aos-delay="{{ block.animate.delay }}"{% endif %}>
       {% case block.type %}
         {% when 'phone' %}
           {% include iphone.html image=block.image %}
         {% when 'imac' %}
           {% include imac.html image=block.image %}
         {% when 'poster' %}
-          {% include poster.html image=block.image %}
+          {% include image.html image=block.image %}
         {% when 'print' %}
           {% include print.html image=block.image %}
         {% when 'image' %}
-          <img src="{{ site.baseurl }}{{ block.image }}" alt="">
+          {% include image.html image=block.image %}
         {% when 'image--full' %}
-          <img src="{{ site.baseurl }}{{ block.image }}" alt="">
+          {% include image.html image=block.image %}
         {% when 'text' %}
           {{ block.text | markdownify }}
         {% when 'laptop' %}

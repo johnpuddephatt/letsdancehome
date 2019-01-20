@@ -70,7 +70,7 @@
   <div class="casestudy--header--text">
     <div class="casestudy--header--about">
       <h1 class="casestudy--header--client">Collaborative Housing</h1>
-      <div class="casestudy--header--type">Branding, website</div>
+      <ul class="casestudy--header--type"></ul>
     </div>
     <div class="casestudy--header--intro"></div>
   </div>
@@ -81,6 +81,94 @@
     </main>
 
     
+
+      <script>
+        document.addEventListener('DOMContentLoaded',function(){
+
+          if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
+
+            var aos = {
+              offset: 120,
+              delay: 0,
+              easing: "ease",
+              duration: 750,
+              disable: !1,
+              once: 1,
+              startEvent: "DOMContentLoaded"
+            };
+
+            document.body.classList.add('aos');
+            document.body.setAttribute("data-aos-easing", aos.easing),
+            document.body.setAttribute("data-aos-duration", aos.duration);
+            document.body.setAttribute("data-aos-delay", aos.delay);
+
+            var aosOptions = {
+              threshold: [0,.25,.5,.75],
+              rootMargin: '30px 30px'
+            };
+
+            var aos = document.querySelectorAll("[data-aos]");
+
+            var aosCallback =  function(entries, observer) {
+              entries.forEach(function(entry) {
+                if(entry.intersectionRatio >= 0 && entry.target.getAttribute('data-srcset')) {
+                  entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
+                  entry.target.removeAttribute('data-srcset');
+                }
+                if(entry.intersectionRatio > 0) {
+                  entry.target.classList.add('aos-animate');
+                }
+                else if(entry.intersectionRatio == 0) {
+                  entry.target.classList.remove('aos-animate');
+                }
+              });
+            }
+
+            var aosObserver = new IntersectionObserver(aosCallback, aosOptions);
+
+            aos.forEach(function(image) {
+              aosObserver.observe(image);
+            });
+
+            var lazyloadOptions = {
+              threshold: [0],
+              rootMargin: '30px 30px'
+            };
+
+
+            var lazyloadCallback =  function(entries, observer) {
+              entries.forEach(function(entry) {
+                if(entry.intersectionRatio > 0 && (entry.target.getAttribute('data-lazyload') != 'loaded')) {
+                  if(entry.target.getAttribute('data-srcset')) {
+                    entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
+                  }
+                  entry.target.setAttribute('data-lazyload','loaded');
+                }
+              });
+            }
+
+            var lazyloadObserver = new IntersectionObserver(lazyloadCallback, lazyloadOptions);
+
+            var lazyload = document.querySelectorAll("[data-lazyload]");
+            lazyload.forEach(function(image) {
+              lazyloadObserver.observe(image);
+            });
+
+
+
+          }
+          else {
+            // @todo: trigger lazy load switch now as no intersection observer exists!
+            var lazyload = document.querySelectorAll("[data-srcset]");
+
+            lazyload.forEach(function(image) {
+              image.setAttribute('srcset',image.getAttribute('data-srcset'));
+              image.removeAttribute('data-lazyload');
+            });
+          }
+        });
+      </script>
+
 
   </body>
 

@@ -9,17 +9,19 @@
   right: 0
   z-index: 999
   position: relative
-  html.scrolled &
-    a
-      color: black
   a
-    color: white
-    transition: color $base-duration
+    color: black
   body.home &
     // position: sticky
     top: 0
     bottom: auto
     margin-top: -6vmax
+    a
+      color: white
+      transition: color $base-duration
+  html.scrolled &
+    a
+      color: black !important
   .site-title
     font-size: modular-scale(2)
     font-family: 'Tide Sans LD'
@@ -33,10 +35,11 @@
     font-size: modular-scale(0)
 .site-nav
   float: right
-  color: white
-  transition: color $base-duration
+  body.home &
+    color: white
+    transition: color $base-duration
   html.scrolled &
-    color: black
+    color: black !important
 
   font-weight: 700
   .nav-trigger

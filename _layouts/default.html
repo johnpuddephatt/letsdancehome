@@ -16,6 +16,7 @@
     {% if page.layout == 'home' %}
       <script type="text/javascript" src="{{ site.baseurl }}/assets/scripts/simpleslider.min.js"></script>
       <script type="text/javascript" src="{{ site.baseurl }}/assets/scripts/initialise.js"></script>
+    {% endif %}
 
       <script>
         document.addEventListener('DOMContentLoaded',function(){
@@ -32,10 +33,10 @@
               startEvent: "DOMContentLoaded"
             };
 
-            document.querySelector("body").classList.add('aos');
-            document.querySelector("body").setAttribute("data-aos-easing", aos.easing),
-            document.querySelector("body").setAttribute("data-aos-duration", aos.duration);
-            document.querySelector("body").setAttribute("data-aos-delay", aos.delay);
+            document.body.classList.add('aos');
+            document.body.setAttribute("data-aos-easing", aos.easing),
+            document.body.setAttribute("data-aos-duration", aos.duration);
+            document.body.setAttribute("data-aos-delay", aos.delay);
 
             var aosOptions = {
               threshold: [0,.25,.5,.75],
@@ -46,9 +47,9 @@
 
             var aosCallback =  function(entries, observer) {
               entries.forEach(function(entry) {
-                if(entry.intersectionRatio >= 0 && entry.target.classList.contains('lazyload')) {
+                if(entry.intersectionRatio >= 0 && entry.target.getAttribute('data-srcset')) {
                   entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
-                  entry.target.classList.remove('lazyload');
+                  entry.target.removeAttribute('data-srcset');
                 }
                 if(entry.intersectionRatio > 0) {
                   entry.target.classList.add('aos-animate');
@@ -94,18 +95,16 @@
           }
           else {
             // @todo: trigger lazy load switch now as no intersection observer exists!
-            var lazyload = document.querySelectorAll("[data-lazyload]");
+            var lazyload = document.querySelectorAll("[data-srcset]");
 
             lazyload.forEach(function(image) {
               image.setAttribute('srcset',image.getAttribute('data-srcset'));
               image.removeAttribute('data-lazyload');
-              image.classList.remove('lazyload');
             });
           }
         });
       </script>
 
-    {% endif %}
 
   </body>
 

@@ -856,8 +856,9 @@
 
 .imac {
 	/* 	width: 450px; */
-	width: 80%;
-	max-width: 25 * $base-spacing;
+	width: 100%;
+	margin: 6vmax;
+	max-width: 22	 * $base-spacing;
 	perspective: 250px;
 	position: relative;
 
@@ -961,7 +962,7 @@
 		&::after {
 			content: '';
 			height: 1px;
-			background-color: rgba(50,50,50,.075);
+			background-color: rgba(50,50,50,.05);
 			display: block;
 			position: absolute;
 			top: 90%;

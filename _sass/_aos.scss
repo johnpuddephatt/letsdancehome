@@ -4,11 +4,11 @@ $translate: 3 * $base-spacing;
 
   body.aos {
 
-    @for $i from 1 through 20 {
+    @for $i from 0 through 50 {
       [data-aos][data-aos][data-aos-duration="#{50 * $i}"],
        &[data-aos-duration="#{50 * $i}"] [data-aos] {
-        transition-duration: #{50ms * $i}, 0ms;
-        transition-delay: 0ms, #{50ms * $i};
+        transition-duration: #{50ms * $i}, #{50ms * $i};
+        transition-delay: 0ms, 0;
       }
       [data-aos][data-aos][data-aos-duration="#{50 * $i}"].aos-animate,
        &[data-aos-duration="#{50 * $i}"] [data-aos].aos-animate {
@@ -18,11 +18,12 @@ $translate: 3 * $base-spacing;
 
       [data-aos][data-aos][data-aos-delay="#{50 * $i}"],
        &[data-aos-delay="#{50 * $i}"] [data-aos] {
-        transition-delay: 0, #{50ms * $i};
+        transition-delay: 0;
+
       }
       [data-aos][data-aos][data-aos-delay="#{50 * $i}"].aos-animate,
        &[data-aos-delay="#{50 * $i}"] [data-aos].aos-animate {
-        transition-duration: #{50ms * $i};
+        transition-delay: #{50ms * $i}, #{50ms * $i};
       }
     }
 
@@ -128,7 +129,7 @@ $translate: 3 * $base-spacing;
     }
 
     [data-aos^=fade][data-aos^=fade] {
-      opacity: 0.01;
+      opacity: 0;
       transition-property: opacity,transform;
     }
 
@@ -170,7 +171,7 @@ $translate: 3 * $base-spacing;
     }
 
     [data-aos^=zoom][data-aos^=zoom] {
-      opacity: 0.01;
+      opacity: 0;
       transition-property: opacity,transform;
     }
 
