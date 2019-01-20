@@ -26,6 +26,7 @@ sections:
   - type: image
     image:
       src: '/assets/images/lch/houses-strip.svg'
+      width: 100%
 - height: full-height
   padding: xl
   background: gray
@@ -53,11 +54,13 @@ sections:
   - type: image--full
     image:
       src: /assets/images/lch/caroline.jpg
+      lazyload: true
 - height: full-height
   blocks:
   - type: image--full
     image:
       src: /assets/images/lch/caroline2.jpg
+      lazyload: true
 - background: gray
   height: full-height
   blocks:
@@ -83,6 +86,7 @@ sections:
     height: full-height
     image:
       src: /assets/images/lch/pins.jpg
+      lazyload: true
 - height: full-height
   padding: large
   background: gray
@@ -110,12 +114,15 @@ sections:
   - type: image--full
     image:
       src: '/assets/images/lch/cathy-1.jpg'
+      lazyload: true
   - type: image--full
     image:
       src: '/assets/images/lch/cathy-2.jpg'
+      lazyload: true
 - height: full-height
   blocks:
   - type: image--full
     image:
       src: '/assets/images/lch/cathy-3.jpg'
+      lazyload: true
 ---

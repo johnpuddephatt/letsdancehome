@@ -17,9 +17,9 @@
 <meta property="og:url" content="http://localhost:4000/casestudies/iris.html" />
 <meta property="og:site_name" content="Let’s Dance" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-01-20T18:43:24+00:00" />
+<meta property="article:published_time" content="2019-01-20T21:05:03+00:00" />
 <script type="application/ld+json">
-{"description":"title: A high-end homepage for a boutique fashion brand client: Iris date: 2018-01-04 type: Website thumb: /uploads/iris.jpg intro: &gt; Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.","@type":"BlogPosting","url":"http://localhost:4000/casestudies/iris.html","headline":"Iris","dateModified":"2019-01-20T18:43:24+00:00","datePublished":"2019-01-20T18:43:24+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/casestudies/iris.html"},"@context":"http://schema.org"}</script>
+{"description":"title: A high-end homepage for a boutique fashion brand client: Iris date: 2018-01-04 type: Website thumb: /uploads/iris.jpg intro: &gt; Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.","@type":"BlogPosting","url":"http://localhost:4000/casestudies/iris.html","headline":"Iris","dateModified":"2019-01-20T21:05:03+00:00","datePublished":"2019-01-20T21:05:03+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/casestudies/iris.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -65,7 +65,7 @@
     <main class="page-content" aria-label="Content">
         <header class="casestudy--header">
   <div class="casestudy--header--image">
-    <img src="" alt="">
+    <img alt="Image from the screening of Cathy Come home by Leeds Community Homes at Hyde Park Picture House" class="" src="" data-lazyload="" />
   </div>
   <div class="casestudy--header--text">
     <div class="casestudy--header--about">
@@ -114,6 +114,10 @@
                 if(entry.intersectionRatio >= 0 && entry.target.getAttribute('data-srcset')) {
                   entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
                   entry.target.removeAttribute('data-srcset');
+                  entry.target.addEventListener('load',()=>{
+                    console.log('image loaded!');
+                    entry.target.setAttribute('data-lazyload','loaded');
+                  })
                 }
                 if(entry.intersectionRatio > 0) {
                   entry.target.classList.add('aos-animate');
@@ -141,9 +145,27 @@
                 if(entry.intersectionRatio > 0 && (entry.target.getAttribute('data-lazyload') != 'loaded')) {
                   if(entry.target.getAttribute('data-srcset')) {
                     entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
+                    entry.target.removeAttribute('data-srcset');
+                    if(entry.target.naturalWidth) {
+                      entry.target.setAttribute('data-lazyload','loaded');
+                    }
+                    else {
+                      entry.target.addEventListener('load',()=>{
+                        entry.target.setAttribute('data-lazyload','loaded');
+                      });
+                    }
                   }
-                  entry.target.setAttribute('data-lazyload','loaded');
-                }
+                  else {
+                    if(entry.target.naturalWidth) {
+                        entry.target.setAttribute('data-lazyload','loaded');
+                    }
+                    else {
+                      entry.target.addEventListener('load',()=>{
+                        entry.target.setAttribute('data-lazyload','loaded');
+                      });
+                    }                  }
+                  }
+
               });
             }
 

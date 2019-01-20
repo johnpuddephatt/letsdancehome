@@ -5,7 +5,7 @@ layout: default
 
 <header class="casestudy--header">
   <div class="casestudy--header--image">
-    {% include cloudinarylazy.html img=page.thumb alt="Image from the screening of Cathy Come home by Leeds Community Homes at Hyde Park Picture House" width="1600" height="750" %}
+    {% include cloudinarylazy.html lazyload="true" image=page.thumb alt="Image from the screening of Cathy Come home by Leeds Community Homes at Hyde Park Picture House" width="1600" height="750" %}
   </div>
   <div class="casestudy--header--text">
     <div class="casestudy--header--about">
@@ -33,9 +33,9 @@ layout: default
         {% when 'print' %}
           {% include print.html image=block.image.src %}
         {% when 'image' %}
-          {% include image.html image=block.image.src width=block.image.width height=block.image.height modes=block.image.modes alt=block.image.alt %}
+          {% include cloudinarylazy.html image=block.image.src lazyload=block.image.lazyload width=block.image.width height=block.image.height modes=block.image.modes alt=block.image.alt %}
         {% when 'image--full' %}
-          {% include image.html image=block.image.src %}
+        {% include cloudinarylazy.html image=block.image.src lazyload=block.image.lazyload width=block.image.width height=block.image.height modes=block.image.modes alt=block.image.alt %}
         {% when 'text' %}
           {{ block.text | markdownify }}
         {% when 'laptop' %}

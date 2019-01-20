@@ -65,7 +65,7 @@
     <main class="page-content" aria-label="Content">
         <header class="casestudy--header">
   <div class="casestudy--header--image">
-    <img src="/uploads/stgeorges.jpg" alt="">
+    <img alt="Image from the screening of Cathy Come home by Leeds Community Homes at Hyde Park Picture House" class="" src="/uploads/stgeorges.jpg" data-lazyload="" />
   </div>
   <div class="casestudy--header--text">
     <div class="casestudy--header--about">
@@ -114,6 +114,10 @@
                 if(entry.intersectionRatio >= 0 && entry.target.getAttribute('data-srcset')) {
                   entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
                   entry.target.removeAttribute('data-srcset');
+                  entry.target.addEventListener('load',()=>{
+                    console.log('image loaded!');
+                    entry.target.setAttribute('data-lazyload','loaded');
+                  })
                 }
                 if(entry.intersectionRatio > 0) {
                   entry.target.classList.add('aos-animate');
@@ -141,9 +145,27 @@
                 if(entry.intersectionRatio > 0 && (entry.target.getAttribute('data-lazyload') != 'loaded')) {
                   if(entry.target.getAttribute('data-srcset')) {
                     entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
+                    entry.target.removeAttribute('data-srcset');
+                    if(entry.target.naturalWidth) {
+                      entry.target.setAttribute('data-lazyload','loaded');
+                    }
+                    else {
+                      entry.target.addEventListener('load',()=>{
+                        entry.target.setAttribute('data-lazyload','loaded');
+                      });
+                    }
                   }
-                  entry.target.setAttribute('data-lazyload','loaded');
-                }
+                  else {
+                    if(entry.target.naturalWidth) {
+                        entry.target.setAttribute('data-lazyload','loaded');
+                    }
+                    else {
+                      entry.target.addEventListener('load',()=>{
+                        entry.target.setAttribute('data-lazyload','loaded');
+                      });
+                    }                  }
+                  }
+
               });
             }
 
