@@ -77,6 +77,7 @@
                 if(entry.intersectionRatio > 0 && (entry.target.getAttribute('data-lazyload') != 'loaded')) {
                   if(entry.target.getAttribute('data-srcset')) {
                     entry.target.setAttribute('srcset',entry.target.getAttribute('data-srcset'));
+                    entry.target.removeAttribute('data-srcset');
                   }
                   entry.target.setAttribute('data-lazyload','loaded');
                 }
