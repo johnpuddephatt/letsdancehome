@@ -20,82 +20,102 @@ sections:
   background: gray
   blocks:
   - type: imac
-    image: '/assets/images/lch/homepage.png'
+    image:
+      src: '/assets/images/lch/homepage.png'
 - blocks:
   - type: image
-    image: '/assets/images/lch/houses-strip.svg'
+    image:
+      src: '/assets/images/lch/houses-strip.svg'
 - height: full-height
   padding: xl
   background: gray
   blocks:
   - type: image
-    image: '/assets/images/lch/icon-one.svg'
+    image:
+      src: '/assets/images/lch/icon-one.svg'
     animate:
       direction: fade-up
       delay: 250
   - type: image
-    image: '/assets/images/lch/icon-two.svg'
+    image:
+      src: '/assets/images/lch/icon-two.svg'
     animate:
       direction: fade-up
       delay: 500
   - type: image
-    image: '/assets/images/lch/icon-three.svg'
+    image:
+      src: '/assets/images/lch/icon-three.svg'
     animate:
       direction: fade-up
       delay: 750
 - height: full-height
   blocks:
   - type: image--full
-    image: /assets/images/lch/caroline.jpg
+    image:
+      src: /assets/images/lch/caroline.jpg
 - height: full-height
   blocks:
   - type: image--full
-    image: /assets/images/lch/caroline2.jpg
+    image:
+      src: /assets/images/lch/caroline2.jpg
 - background: gray
   height: full-height
   blocks:
   - type: print
-    image: '/assets/images/lch/businesscard-front.svg'
+    image:
+      src: '/assets/images/lch/businesscard-front.svg'
   - type: print
-    image: '/assets/images/lch/businesscard-rear.svg'
+    image:
+      src: '/assets/images/lch/businesscard-rear.svg'
 - background: gray
   padding: medium
   height: full-height
   blocks:
   - type: image
-    image: '/assets/images/lch/tote.svg'
+    image:
+      src: '/assets/images/lch/tote.svg'
+      width: 500
+      height: auto
+      modes: c_fit
 - height: full-height
   blocks:
   - type: image--full
     height: full-height
-    image: /assets/images/lch/pins.jpg
+    image:
+      src: /assets/images/lch/pins.jpg
 - height: full-height
   padding: large
   background: gray
   blocks:
   - type: image
-    image: '/assets/images/lch/blog-one.svg'
+    image:
+      src: '/assets/images/lch/blog-one.svg'
     animate:
       direction: fade-up
       delay: 250
   - type: image
-    image: '/assets/images/lch/blog-two.svg'
+    image:
+      src: '/assets/images/lch/blog-two.svg'
     animate:
       direction: fade-up
       delay: 500
   - type: image
-    image: '/assets/images/lch/blog-three.svg'
+    image:
+      src: '/assets/images/lch/blog-three.svg'
     animate:
       direction: fade-up
       delay: 750
 - height: full-height
   blocks:
   - type: image--full
-    image: '/assets/images/lch/cathy-1.jpg'
+    image:
+      src: '/assets/images/lch/cathy-1.jpg'
   - type: image--full
-    image: '/assets/images/lch/cathy-2.jpg'
+    image:
+      src: '/assets/images/lch/cathy-2.jpg'
 - height: full-height
   blocks:
   - type: image--full
-    image: '/assets/images/lch/cathy-3.jpg'
+    image:
+      src: '/assets/images/lch/cathy-3.jpg'
 ---

@@ -25,21 +25,21 @@ layout: default
     <div class="block block--{{ block.type }} {{ block.background }}" {% if block.animate.direction %}data-aos="{{ block.animate.direction }}"{% endif %} {% if block.animate.delay %}data-aos-delay="{{ block.animate.delay }}"{% endif %}>
       {% case block.type %}
         {% when 'phone' %}
-          {% include iphone.html image=block.image %}
+          {% include iphone.html image=block.image.src %}
         {% when 'imac' %}
-          {% include imac.html image=block.image %}
+          {% include imac.html image=block.image.src %}
         {% when 'poster' %}
-          {% include image.html image=block.image %}
+          {% include image.html image=block.image.src %}
         {% when 'print' %}
-          {% include print.html image=block.image %}
+          {% include print.html image=block.image.src %}
         {% when 'image' %}
-          {% include image.html image=block.image %}
+          {% include image.html image=block.image.src width=block.image.width height=block.image.height modes=block.image.modes %}
         {% when 'image--full' %}
-          {% include image.html image=block.image %}
+          {% include image.html image=block.image.src %}
         {% when 'text' %}
           {{ block.text | markdownify }}
         {% when 'laptop' %}
-          {% include laptop.html image=block.image %}
+          {% include laptop.html image=block.image.src %}
         {% endcase %}
       </div>
     {% endfor %}
