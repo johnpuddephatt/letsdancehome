@@ -6,7 +6,7 @@ areas:
 - Branding
 - Web design
 - Video &amp; photography
-thumb: /assets/images/LCH/header.jpg
+thumb: /assets/images/lch/header.jpg
 intro: |
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
 
