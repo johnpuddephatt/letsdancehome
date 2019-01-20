@@ -74,8 +74,7 @@ sections:
   - type: image
     image:
       src: '/assets/images/lch/tote.svg'
-      width: 500
-      height: 100
+      width: 400
       modes: c_fit
       alt: 'Leeds Community Homes branded tote bag'
 - height: full-height
