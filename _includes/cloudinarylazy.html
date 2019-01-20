@@ -3,11 +3,11 @@
 {% if include.pathonly != 'true' %}
 <img alt="{{  include.alt }}" src="
 {% endif %}
-//res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_{{ include.width | default: "500"}},{% if include.height %}h_{{ include.height | default: "500"}}{% else %},h_auto{% endif %}{{ include.quality | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }}/{{ site.url }}{{ site.baseurl }}{{ include.img }}
+//res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_{{ include.width | default: "500"}},{% if include.height %}h_{{ include.height | default: "500"}}{% endif %}{{ include.quality | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }}/{{ site.url }}{{ site.baseurl }}{{ include.img }}
 {% if include.pathonly != 'true' %}"
  width="{{ include.width | default: 500 }}"
  height="{{ include.height | default: 500}}"
- data-srcset="{% for breakpoint in site.breakpoints %} //res.cloudinary.com/{{ site.cloudinary }}/image/fetch/{{ breakpoint | prepend: "w_"}}{% if include.height %}{{ breakpoint | times: include.height | divided_by: include.width | prepend: ",h_"}}{% else %},h_auto{% endif %}{{ include.quality | default: "auto" | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }},f_auto/{{ site.url }}{{ site.baseurl }}{{ include.img }} {{ breakpoint }}w{% if forloop.last == false %}, {% endif %}{% endfor %}"
+ data-srcset="{% for breakpoint in site.breakpoints %} //res.cloudinary.com/{{ site.cloudinary }}/image/fetch/{{ breakpoint | prepend: "w_"}}{% if include.height %}{{ breakpoint | times: include.height | divided_by: include.width | prepend: ",h_"}}{% endif %}{{ include.quality | default: "auto" | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }},f_auto/{{ site.url }}{{ site.baseurl }}{{ include.img }} {{ breakpoint }}w{% if forloop.last == false %}, {% endif %}{% endfor %}"
  srcset="//res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_100,e_colorize,q_1{% if include.height %}{{ 100 | times: include.height | divided_by: include.width | prepend: ",h_"}}{% endif %}/{{ site.url }}{{ site.baseurl }}{{ include.img }} {{ include.width | default: "500"}}w"
  sizes="{{ include.sizes | default: "100vw" }}"
  class="{{ include.class }}"

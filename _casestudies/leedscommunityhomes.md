@@ -77,6 +77,7 @@ sections:
       width: 500
       height: 100
       modes: c_fit
+      alt: 'Leeds Community Homes branded tote bag'
 - height: full-height
   blocks:
   - type: image--full
