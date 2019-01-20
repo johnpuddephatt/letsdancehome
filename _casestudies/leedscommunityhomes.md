@@ -26,7 +26,7 @@ sections:
   - type: image
     image:
       src: '/assets/images/lch/houses-strip.svg'
-      width: 100
+      width: 1600
 - height: full-height
   padding: xl
   background: gray
