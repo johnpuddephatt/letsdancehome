@@ -39,7 +39,7 @@ layout: default
         {% if forloop.index == 1 or forloop.index == 5 or forloop.index == 9 %}
           <div class="case-study--item case-study--item--large" data-aos="fade-up" data-aos-ratio=".25">
             <div class="case-study--image">
-              {% include cloudinarylazy.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="600" sizes="(orientation: portrait) 100vw, 40vw" modes="c_fill" %}
+              {% include cloudinary.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="600" sizes="(orientation: portrait) 100vw, 40vw" modes="c_fill" %}
             </div>
             <div class="case-study--text">
               <h3 class="case-study--title">{{ casestudy.title }}</h3>
@@ -51,7 +51,7 @@ layout: default
           {% else %}
           <div class="case-study--item" data-aos="fade-up" data-aos-ratio=".25">
             <div class="case-study--image">
-              {% include cloudinarylazy.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="600" sizes="(orientation: portrait) 100vw, 40vw" modes="c_fill" %}
+              {% include cloudinary.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="600" sizes="(orientation: portrait) 100vw, 40vw" modes="c_fill" %}
             </div>
             <div class="case-study--text">
               <h3 class="case-study--client">{{ casestudy.client }}</h3>
