@@ -1,5 +1,5 @@
 {% capture img_output %}
-{% if site.local == true or include.img contains '.svg' %}
+{% if ((site.local == true) or (include.img contains '.svg')) %}
 {% if include.pathonly != 'true' %}
 <img alt="{{  include.alt }}" src="
 {% endif %}
