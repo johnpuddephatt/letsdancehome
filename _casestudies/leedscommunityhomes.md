@@ -6,7 +6,7 @@ type:
 - Branding
 - Web design
 - Video &amp; photography
-thumb: assets/images/lch/header.jpg
+thumb: /assets/images/lch/header.jpg
 intro: |
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
 
@@ -53,13 +53,13 @@ sections:
   blocks:
   - type: image--full
     image:
-      src: assets/images/lch/caroline.jpg
+      src: /assets/images/lch/caroline.jpg
       lazyload: true
 - height: square-height
   blocks:
   - type: image--full
     image:
-      src: assets/images/lch/caroline2.jpg
+      src: /assets/images/lch/caroline2.jpg
       lazyload: true
 - background: background-gray
   height: square-height
@@ -85,7 +85,7 @@ sections:
   blocks:
   - type: image--full
     image:
-      src: assets/images/lch/pins.jpg
+      src: /assets/images/lch/pins.jpg
       lazyload: true
 - height: full-height
   padding: large
