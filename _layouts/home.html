@@ -1,0 +1,100 @@
+---
+layout: default
+---
+<section class="section section--loading">
+  <div class="loading-message">
+    we help good people<br />say good things
+  </div>
+</section>
+
+<section class="section section--hero" data-simple-slider id="hero-image-slider">
+  {% for slide in site.slides %}
+    {% capture slide_image %}/assets/images/{{ slide.image }}{% endcapture %}
+    {% include cloudinary.html img=slide_image position=slide.position width="1280" height="720" modes="c_fill" quality="85" sizes="(orientation: portrait) 177vw, 100vw"%}
+  {% endfor %}
+</section>
+
+<!-- <section class="section section--hero" data-simple-slider id="hero-flag-slider">
+{% for i in (1..site.stripe_count) %}
+  <div class="flag"></div>
+{% endfor %}
+</section> -->
+
+
+{% include header.html %}
+
+<section class="section--intro container">
+  <div class="narrow-container intro--container">
+    <!-- <h1 class="intro-title">We’re Let’s Dance.</h1> -->
+    <h2 class="intro--title">We’re a small creative agency specialising in working with charities, independents and organisations doing social good.</h2>
+  </div>
+</section>
+
+<section class="section--case-study">
+  <div class="container">
+    <h2 class="sr-only">Case studies</h2>
+    <div class="case-study--container">
+      {% assign casestudies = site.casestudies | order: 'date' %}
+      {% for casestudy in casestudies %}
+        {% if forloop.index == 1 or forloop.index == 5 or forloop.index == 9 %}
+          <div class="case-study--item case-study--item--large" data-aos="fade-up" data-aos-ratio=".25">
+            <div class="case-study--image">
+              {% include cloudinary.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="600" sizes="(orientation: portrait) 100vw, 40vw" modes="c_fill" %}
+            </div>
+            <div class="case-study--text">
+              <h3 class="case-study--title">{{ casestudy.title }}</h3>
+              <h3 class="case-study--client">{{ casestudy.client }}</h3>
+              <div class="case-study--type">{{ casestudy.type | join: ", " }}</div>
+              <!-- <a class="button" href="{{ casestudy.url }}">View</a> -->
+            </div>
+          </div>
+          {% else %}
+          <div class="case-study--item" data-aos="fade-up" data-aos-ratio=".25">
+            <div class="case-study--image">
+              {% include cloudinary.html class="case-study--thumb lazyload" img=casestudy.thumb width="900" height="600" sizes="(orientation: portrait) 100vw, 40vw" modes="c_fill" %}
+            </div>
+            <div class="case-study--text">
+              <h3 class="case-study--client">{{ casestudy.client }}</h3>
+              <div class="case-study--type">{{ casestudy.type | join: ", " }}</div>
+              <!-- <a class="button" href="{{ site.baseurl }}{{ casestudy.url }}">View</a> -->
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section--team">
+  <div class="container">
+    <div class="team--text-container">
+      <div class="narrow-container">
+        <div class="team--text--heading">In words or in pictures, in print or online, we love helping people get their message across.</div>
+        <div class="team--text--intro">
+          <p>We’re a small creative agency based in Leeds. Having worked with independents, social enterprises and charities, we know they’re the kind of people we like helping most. That means we don’t assume massive budgets, deliver jargon-filled pitches or make unethical choices.</p>
+          </div>
+      </div>
+    </div>
+    <div class="team--text-container">
+      <div class="team--text--people narrow-container">
+        <div>
+          <h2 class="team--text--people--title">What we do:</h2>
+          <ul class="team--text--people--list">
+            <li class="team--text--people--list--name">Branding</li>
+            <li class="team--text--people--list--name">Web design</li>
+            <li class="team--text--people--list--name">Illustration</li>
+            <li class="team--text--people--list--name">Signage</li>
+            <li class="team--text--people--list--name">Campaigns</li>
+            <li class="team--text--people--list--name">Fundraising</li>
+            <li class="team--text--people--list--name">Social media</li>
+            <li class="team--text--people--list--name">Digital democracy</li>
+          </ul>
+        </div>
+        <div class="team--photo-container" data-aos="fade-up" data-aos-ratio=".25">
+          {% include cloudinary.html class="team--photo" img="/assets/images/team.jpg" width="600" height="600" modes="c_fill,g_faces" sizes="(orientation: portrait) 85vw, 40vw"  quality="85" %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% include footer.html %}

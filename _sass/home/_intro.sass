@@ -1,0 +1,43 @@
+.section--intro
+  height: 100vh
+  width: 100%
+  // background-image: linear-gradient(135deg, $color10 40%, white 40.01%)
+  display: flex
+  flex-direction: column
+  justify-content: center
+  margin-top: 4vmax
+
+  & > *:last-child
+    margin-bottom: 0
+  .intro--container
+    text-align: center
+    padding: 8vmax
+    background-color: $light-green
+    position: relative
+    @media (orientation: portrait)
+      min-height: 88vh
+      display: flex
+      padding: 4vmax
+      flex-direction: column
+      justify-content: center
+    // &::before,&::after
+    //   content: ''
+    //   display: block
+    //   position: absolute
+    //   width: 5 * $base-spacing
+    //   height: .15 * $base-spacing
+    //   left: calc(100% + #{$base-spacing})
+    //   bottom: 7 * $base-spacing
+    //   background-color: $color3
+    //   transform: rotate(-45deg)
+    // &::after
+    //   top: calc(100% + #{3 * $base-spacing})
+    //   bottom: auto
+    //   left: auto
+    //   right: 3 * $base-spacing
+
+.intro--title
+  font-size: modular-scale(3)
+  margin-bottom: $base-spacing
+  line-height: $base-line-height
+  margin-bottom: 0

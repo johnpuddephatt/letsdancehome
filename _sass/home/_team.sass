@@ -1,0 +1,77 @@
+.section--team
+  padding-top: 0
+  padding-bottom: 2 * $base-spacing
+  @media (orientation: landscape)
+    padding-top: 2 * $base-spacing
+    padding-bottom: 4 * $base-spacing
+  @media (min-width: $large-screen)
+    padding-top: 4 * $base-spacing
+    padding-bottom: 6 * $base-spacing
+  .team--photo-container
+    flex: 0 0 60%
+    margin-top: -2 * $base-spacing
+    @media (orientation: landscape)
+      margin-top: -$base-spacing
+  .team--photo
+    display: block
+    height: auto
+    width: 100%
+  .team--text-container:first-child
+    background-color: $light-green
+  .team--text--heading
+    font-size: modular-scale(4)
+    line-height: $heading-line-height
+    font-weight: 700
+    padding-top: 2 * $base-spacing
+    margin-bottom: 1.5 * $base-spacing
+    margin-left: auto
+    @media (orientation: landscape)
+      text-align: right
+      width: 75%
+  .team--text--intro
+    @media (orientation: landscape)
+      width: 75%
+      border-left: $small-spacing/2 solid $base-font-color
+      padding-left: $base-spacing
+    padding-bottom: 2.5 * $base-spacing
+  .team--text--people
+    display: flex
+    flex-direction: column
+    @media (orientation: landscape)
+      flex-direction: row
+      margin-top: auto
+      justify-content: space-between
+    > div:first-child
+      text-align: center
+
+      order: 2
+      padding: 2 * $base-spacing $base-spacing
+      background-color: $pink
+      margin: 2 * $base-spacing (-$base-spacing)
+      @media (orientation: landscape)
+        background-color: initial
+        order: 0
+        text-align: left
+        padding: $base-spacing $base-spacing 0
+        margin: 0 auto
+        flex: 1 1 auto
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        border-left: $small-spacing/2 solid $base-font-color
+  .team--text--people--title
+    font-size: modular-scale(3)
+    line-height: 1
+    text-transform: lowercase
+    margin-bottom: $base-spacing
+  .team--text--people--list
+    text-align: center
+    @media (orientation: landscape)
+      text-align: left
+    .team--text--people--list--name
+      font-size: modular-scale(1)
+      font-weight: 700
+      text-transform: lowercase
+      margin-bottom: $small-spacing/2
+    li:last-child, p:last-child
+      margin-bottom: 0

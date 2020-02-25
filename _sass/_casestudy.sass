@@ -1,0 +1,204 @@
+/* Header */
+
+.casestudy--header
+  display: flex
+  flex-direction: column
+  margin: 0 3vmax
+  @media screen and (min-width: $medium-screen)
+    margin: 0 4vmax
+
+.casestudy--header--image
+  background-color: $light-gray
+  position: relative
+  display: block
+  flex: 1 0 auto
+  height: calc(100vw - 13vmax)
+  @media screen and (orientation: landscape)
+    height: calc(100vh - 13vmax)
+  img
+    position: absolute
+    height: 100%
+    width: 100%
+    object-fit: cover
+
+.casestudy--header--client
+  font-size: modular-scale(2)
+  margin-bottom: 1vmax
+
+.casestudy--header--text
+  flex: 0 0 auto
+  margin: 2vmax 0 0
+  @media screen and (orientation: landscape)
+    display: flex
+    flex-direction: row
+
+.casestudy--header--about
+  flex: 0 0 33%
+  padding-right: 2vmax
+
+.casestudy--header--type
+  font-size: modular-scale(1)
+  color: $medium-gray
+  font-weight: 500
+  text-transform: lowercase
+  margin-bottom: $base-spacing
+  @media screen and (orientation: landscape)
+    margin-bottom: 0
+
+
+.casestudy--header--intro
+  flex: 0 1 67%
+  @media screen and (orientation: landscape)
+    columns: 2
+    column-gap: 4vmax
+    padding-left: 2vmax
+
+
+.casestudy--section
+  margin: 3vmax
+  @media screen and (min-width: $medium-screen)
+    margin: 4vmax
+  display: flex
+  align-items: center
+  justify-content: center
+  @media screen and (orientation: portrait)
+    flex-direction: column
+  overflow: hidden
+  html.debug &
+    background-clip: content-box
+    background-image: linear-gradient(45deg, #dddddd 2.38%, rgba(255,255,255,.2) 2.38%, rgba(255,255,255,.2) 50%, #dddddd 50%, #dddddd 52.38%, rgba(255,255,255,.2) 52.38%, rgba(255,255,255,.2) 100%)
+    background-size: 29.70px 29.70px
+    outline: 1px solid black
+  // Section paddings
+  &.padding-medium
+    padding: 6vh 6vw
+  &.padding-large
+    padding: 12vh 12vw
+  &.padding-xl
+    padding: 18vh 18vw
+  // Section heights
+  &.full-height
+    height: calc(100vh - 8vmax)
+    @media screen and (orientation: portrait)
+      height: calc(100vh - 8vmax)
+  &.square-height
+    height: calc(100vh - 8vmax)
+    @media screen and (orientation: portrait)
+      height: calc(100vw - 8vmax)
+  &:last-child
+    margin-bottom: 4vmax
+  // Section colours
+  &.background-gray
+    background-color: $light-gray
+    color: white
+  &.background-blue
+    background-color: $blue
+  &.background-green
+    background-color: $green
+  &.background-pink
+    background-color: $pink
+  &.background-purple
+    background-color: $purple
+
+.block
+  flex: 1 1 20%
+  text-align: center
+  position: relative
+  height: 100%
+  width: 100%
+  overflow: hidden
+  html.debug &
+    outline: 1px dashed red
+  & + .block
+    margin-left: 4vmax
+    @media screen and (orientation: portrait)
+      margin-left: 0
+      margin-top: 4vmax
+  // Block colours
+  &.background-gray
+    background-color: $light-gray
+    color: white
+  &.background-blue
+    background-color: $blue
+  &.background-green
+    background-color: $green
+  &.background-pink
+    background-color: $pink
+  &.background-purple
+    background-color: $purple
+
+  &.padding-medium
+    padding: 6vh 6vw
+  &.padding-large
+    padding: 12vh 12vw
+  &.padding-xl
+    padding: 18vh 18vw
+
+.block--phone, .block--imac
+  display: flex
+  align-items: center
+  justify-content: center
+
+.block--print + .block--print
+  margin-left: -16 * $base-spacing
+  position: relative
+  z-index: 99
+
+.block--print:nth-last-child(n+2), .block--print:nth-last-child(n+2) ~ .block--print
+  overflow: visible
+  .image::after
+    display: none
+
+.block--print:last-child
+  .image::after
+    display: block !important
+
+
+
+.block--print:nth-child(1)
+  z-index: 9
+.block--print:nth-child(2)
+  z-index: 8
+.block--print:nth-child(3)
+  z-index: 7
+
+.block--text
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  font-size: modular-scale(5)
+  line-height: $heading-line-height
+  font-weight: 700
+  text-align: center
+  padding: 2 * $base-spacing
+  > *:last-child
+    font-weight: 400
+    font-size: modular-scale(-4)
+    margin-top: $small-spacing
+    &::first-letter
+      color: $light-gray
+
+.block--image--full
+  img
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: center
+
+.block--image
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    max-height: 100%
+    height: auto
+    max-width: 100%
+
+.block--phone + .block--phone
+  margin-left: -15%
