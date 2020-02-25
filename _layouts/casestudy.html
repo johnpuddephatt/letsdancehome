@@ -18,11 +18,10 @@ layout: default
   </div>
 </header>
 
-
 {% for section in page.sections %}
-  <section class="casestudy--section {{section.height}} {% if section.padding %}padding-{{section.padding}}{% endif %} {{ section.background }}">
+  <section class="casestudy--section {% if section.padding %}padding-{{section.padding}}{% endif %} {{ section.background }} {{section.height}} {{section.class}}">
     {% for block in section.blocks %}
-    <div class="block block--{{ block.type }} {{ block.background }}" {% if block.animate.direction %}data-aos="{{ block.animate.direction }}"{% endif %} {% if block.animate.delay %}data-aos-delay="{{ block.animate.delay }}"{% endif %}>
+    <div class="block block--{{ block.type }} {% if block.padding %}padding-{{block.padding}}{% endif %} {{ block.color }} {{ block.class }}" {% if block.animate.direction %}data-aos="{{ block.animate.direction }}"{% endif %} {% if block.animate.delay %}data-aos-delay="{{ block.animate.delay }}"{% endif %}>
       {% case block.type %}
         {% when 'phone' %}
           {% include iphone.html image=block.image.src %}

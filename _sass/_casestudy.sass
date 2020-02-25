@@ -23,10 +23,11 @@
 
 .casestudy--header--client
   font-size: modular-scale(2)
+  margin-bottom: 1vmax
 
 .casestudy--header--text
   flex: 0 0 auto
-  margin: 4vmax 0 0
+  margin: 2vmax 0 0
   @media screen and (orientation: landscape)
     display: flex
     flex-direction: row
@@ -60,34 +61,43 @@
   display: flex
   align-items: center
   justify-content: center
+  @media screen and (orientation: portrait)
+    flex-direction: column
   overflow: hidden
   html.debug &
     background-clip: content-box
     background-image: linear-gradient(45deg, #dddddd 2.38%, rgba(255,255,255,.2) 2.38%, rgba(255,255,255,.2) 50%, #dddddd 50%, #dddddd 52.38%, rgba(255,255,255,.2) 52.38%, rgba(255,255,255,.2) 100%)
     background-size: 29.70px 29.70px
     outline: 1px solid black
+  // Section paddings
   &.padding-medium
     padding: 6vh 6vw
   &.padding-large
     padding: 12vh 12vw
   &.padding-xl
     padding: 18vh 18vw
+  // Section heights
   &.full-height
+    height: calc(100vh - 8vmax)
+    @media screen and (orientation: portrait)
+      height: calc(100vh - 8vmax)
+  &.square-height
     height: calc(100vh - 8vmax)
     @media screen and (orientation: portrait)
       height: calc(100vw - 8vmax)
   &:last-child
     margin-bottom: 4vmax
-  &.gray
+  // Section colours
+  &.background-gray
     background-color: $light-gray
     color: white
-  &.blue
+  &.background-blue
     background-color: $blue
-  &.green
+  &.background-green
     background-color: $green
-  &.pink
+  &.background-pink
     background-color: $pink
-  &.purple
+  &.background-purple
     background-color: $purple
 
 .block
@@ -98,21 +108,31 @@
   width: 100%
   overflow: hidden
   html.debug &
-    outline: 1px dashed black
+    outline: 1px dashed red
   & + .block
     margin-left: 4vmax
-  &.gray
+    @media screen and (orientation: portrait)
+      margin-left: 0
+      margin-top: 4vmax
+  // Block colours
+  &.background-gray
     background-color: $light-gray
     color: white
-  &.blue
+  &.background-blue
     background-color: $blue
-  &.green
+  &.background-green
     background-color: $green
-  &.pink
+  &.background-pink
     background-color: $pink
-  &.purple
+  &.background-purple
     background-color: $purple
 
+  &.padding-medium
+    padding: 6vh 6vw
+  &.padding-large
+    padding: 12vh 12vw
+  &.padding-xl
+    padding: 18vh 18vw
 
 .block--phone, .block--imac
   display: flex
@@ -141,7 +161,6 @@
   z-index: 8
 .block--print:nth-child(3)
   z-index: 7
-
 
 .block--text
   display: flex

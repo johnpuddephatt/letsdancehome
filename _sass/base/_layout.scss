@@ -37,3 +37,9 @@ body {
   max-width: $large-screen;
   margin: 0 auto;
 }
+
+.hidden-sm {
+  @media (max-width: $medium-screen) {
+    display: none !important;
+  }
+}

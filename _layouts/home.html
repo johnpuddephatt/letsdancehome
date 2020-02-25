@@ -44,7 +44,7 @@ layout: default
             <div class="case-study--text">
               <h3 class="case-study--title">{{ casestudy.title }}</h3>
               <h3 class="case-study--client">{{ casestudy.client }}</h3>
-              <div class="case-study--type">{{ casestudy.type }}</div>
+              <div class="case-study--type">{{ casestudy.type | join: ", " }}</div>
               <!-- <a class="button" href="{{ casestudy.url }}">View</a> -->
             </div>
           </div>
@@ -55,7 +55,7 @@ layout: default
             </div>
             <div class="case-study--text">
               <h3 class="case-study--client">{{ casestudy.client }}</h3>
-              <div class="case-study--type">{{ casestudy.type }}</div>
+              <div class="case-study--type">{{ casestudy.type | join: ", " }}</div>
               <!-- <a class="button" href="{{ site.baseurl }}{{ casestudy.url }}">View</a> -->
             </div>
           </div>

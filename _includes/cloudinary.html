@@ -1,18 +1,18 @@
 {% capture img_output %}
-{% if site.local != true %}
+{% if site.local == true or include.image contains '.svg' %}
 {% if include.pathonly != 'true' %}
 <img alt="{{  include.alt }}" src="
 {% endif %}
-//res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_{{ include.width | default: "500"}},h_{{ include.height | default: "500"}}{{ include.quality | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }}/{{ site.url }}{{ site.baseurl }}{{ include.img }}
+//res.cloudinary.com/{{ site.cloudinary }}/image/fetch/w_{{ include.width | default: "500"}},h_{{ include.height | default: "500"}}{{ include.quality | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }}/{{ site.url }}{{ site.baseurl }}{{ include.image }}
 {% if include.pathonly != 'true' %}"
  style="{% if include.position %}object-position: {{include.position}}{% endif %}"
  width="{{ include.width | default: 500 }}"
  height="{{ include.height | default: 500}}"
- srcset="{% for breakpoint in site.breakpoints %} //res.cloudinary.com/{{ site.cloudinary }}/image/fetch/{{ breakpoint | prepend: "w_"}}{{ breakpoint | times: include.height | divided_by: include.width | prepend: ",h_"}}{{ include.quality | default: "auto" | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }},f_auto/{{ site.url }}{{ site.baseurl }}{{ include.img }} {{ breakpoint }}w{% if forloop.last == false %}, {% endif %}{% endfor %}"
+ srcset="{% for breakpoint in site.breakpoints %} //res.cloudinary.com/{{ site.cloudinary }}/image/fetch/{{ breakpoint | prepend: "w_"}}{{ breakpoint | times: include.height | divided_by: include.width | prepend: ",h_"}}{{ include.quality | default: "auto" | prepend: ",q_"}}{{ include.modes| default: "c_fill" | prepend: "," }},f_auto/{{ site.url }}{{ site.baseurl }}{{ include.image }} {{ breakpoint }}w{% if forloop.last == false %}, {% endif %}{% endfor %}"
  sizes="{{ include.sizes | default: "100vw" }}"
  class="{{ include.class }}"
 />{% endif %}
 {% else %}
-{% if include.pathonly != 'true' %}<img alt="{{  include.alt }}" class="{{ include.class }}" src="{% endif %}{{ site.baseurl }}{{  include.img }}{% if include.pathonly != 'true' %}" style="{% if include.position %}object-position: {{include.position}}{% endif %}" />{% endif %}
+{% if include.pathonly != 'true' %}<img alt="{{  include.alt }}" class="{{ include.class }}" src="{% endif %}{{ site.baseurl }}{{  include.image }}{% if include.pathonly != 'true' %}" style="{% if include.position %}object-position: {{include.position}}{% endif %}" />{% endif %}
 {% endif %}
 {% endcapture %}{{ img_output | strip_newlines }}

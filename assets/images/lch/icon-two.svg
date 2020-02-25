@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="179.5" height="206" viewBox="0 0 179.5 206">
+<svg xmlns="http://www.w3.org/2000/svg" width="359" height="416" viewBox="0 0 179.5 206">
   <style>
     <![CDATA[.spin{animation:spin 5s infinite linear;transform-origin:89.7px 72.2px}@keyframes spin{to{transform:rotate(360deg)}}]]>
   </style>

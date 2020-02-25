@@ -42,6 +42,9 @@
     letter-spacing: 0
 .site-nav
   float: right
+  display: none
+  @media (orientation: landscape)
+    display: block
   body.home &
     color: white
     transition: color $base-duration
