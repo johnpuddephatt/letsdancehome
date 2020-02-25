@@ -5,7 +5,7 @@ layout: default
 
 <header class="casestudy--header">
   <div class="casestudy--header--image">
-    {% include cloudinarylazy.html lazyload="true" image=page.thumb alt="Image from the screening of Cathy Come home by Leeds Community Homes at Hyde Park Picture House" width="1600" height="750" %}
+    {% include cloudinarylazy.html lazyload="true" img=page.thumb alt="Image from the screening of Cathy Come home by Leeds Community Homes at Hyde Park Picture House" width="1600" height="750" %}
   </div>
   <div class="casestudy--header--text">
     <div class="casestudy--header--about">
@@ -24,21 +24,21 @@ layout: default
     <div class="block block--{{ block.type }} {% if block.padding %}padding-{{block.padding}}{% endif %} {{ block.color }} {{ block.class }}" {% if block.animate.direction %}data-aos="{{ block.animate.direction }}"{% endif %} {% if block.animate.delay %}data-aos-delay="{{ block.animate.delay }}"{% endif %}>
       {% case block.type %}
         {% when 'phone' %}
-          {% include iphone.html image=block.image.src %}
+          {% include iphone.html img=block.image.src %}
         {% when 'imac' %}
-          {% include imac.html image=block.image.src %}
+          {% include imac.html img=block.image.src %}
         {% when 'poster' %}
-          {% include image.html image=block.image.src %}
+          {% include image.html img=block.image.src %}
         {% when 'print' %}
-          {% include print.html image=block.image.src %}
+          {% include print.html img=block.image.src %}
         {% when 'image' %}
-          {% include cloudinarylazy.html image=block.image.src lazyload=block.image.lazyload width=block.image.width height=block.image.height modes=block.image.modes alt=block.image.alt %}
+          {% include cloudinarylazy.html img=block.image.src lazyload=block.image.lazyload width=block.image.width height=block.image.height modes=block.image.modes alt=block.image.alt %}
         {% when 'image--full' %}
-        {% include cloudinarylazy.html image=block.image.src lazyload=block.image.lazyload width=block.image.width height=block.image.height modes=block.image.modes alt=block.image.alt %}
+        {% include cloudinarylazy.html img=block.image.src lazyload=block.image.lazyload width=block.image.width height=block.image.height modes=block.image.modes alt=block.image.alt %}
         {% when 'text' %}
           {{ block.text | markdownify }}
         {% when 'laptop' %}
-          {% include laptop.html image=block.image.src %}
+          {% include laptop.html img=block.image.src %}
         {% endcase %}
       </div>
     {% endfor %}

@@ -5,5 +5,5 @@ client: Canopy
 type:
 - Branding
 - Website
-thumb: /uploads/canopy.jpg
+thumb: uploads/canopy.jpg
 ---

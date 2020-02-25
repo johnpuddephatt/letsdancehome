@@ -5,5 +5,5 @@ date: 2018-01-05
 type:
 - Branding
 - Website
-thumb: /uploads/lemonbalm.png
+thumb: uploads/lemonbalm.png
 ---

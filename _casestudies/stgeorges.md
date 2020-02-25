@@ -6,5 +6,5 @@ type:
 - Branding
 - Website
 - Impact reporting
-thumb: /uploads/stgeorges.jpg
+thumb: uploads/stgeorges.jpg
 ---

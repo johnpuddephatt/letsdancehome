@@ -1,3 +1,3 @@
 <div class="image">
-	<img src="{{ site.baseurl }}{{ include.image }}" alt="" />
+	{% include cloudinary.html img=include.image alt=include.alt modes=include.modes quality=include.quality width=include.width height=include.height %}
 </div>
