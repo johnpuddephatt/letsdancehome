@@ -5,5 +5,5 @@ date: 2018-01-06
 type:
 - Branding
 - Website
-thumb: uploads/peoplesplan.png
+thumb: /uploads/peoplesplan.png
 ---

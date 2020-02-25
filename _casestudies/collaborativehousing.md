@@ -4,7 +4,7 @@ date: 2018-01-08
 type:
 - Branding
 - Website
-thumb: uploads/collaborativehousing.png
+thumb: /uploads/collaborativehousing.png
 sections:
 - height: square-height
   background: background-blue

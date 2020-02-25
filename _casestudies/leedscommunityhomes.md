@@ -21,11 +21,11 @@ sections:
   blocks:
   - type: imac
     image:
-      src: 'assets/images/lch/homepage.png'
+      src: '/assets/images/lch/homepage.png'
 - blocks:
   - type: image
     image:
-      src: 'assets/images/lch/houses-strip.svg'
+      src: '/assets/images/lch/houses-strip.svg'
       width: 1600
 - height: full-height
   padding: xl
@@ -33,19 +33,19 @@ sections:
   blocks:
   - type: image
     image:
-      src: 'assets/images/lch/icon-one.svg'
+      src: '/assets/images/lch/icon-one.svg'
     animate:
       direction: fade-up
       delay: 250
   - type: image
     image:
-      src: 'assets/images/lch/icon-two.svg'
+      src: '/assets/images/lch/icon-two.svg'
     animate:
       direction: fade-up
       delay: 500
   - type: image
     image:
-      src: 'assets/images/lch/icon-three.svg'
+      src: '/assets/images/lch/icon-three.svg'
     animate:
       direction: fade-up
       delay: 750
@@ -66,18 +66,18 @@ sections:
   blocks:
   - type: image
     image:
-      src: 'assets/images/lch/businesscard-front.svg'
+      src: '/assets/images/lch/businesscard-front.svg'
   - type: image
     class: hidden-sm
     image:
-      src: 'assets/images/lch/businesscard-rear.svg'
+      src: '/assets/images/lch/businesscard-rear.svg'
 - background: background-gray
   padding: medium
   height: square-height
   blocks:
   - type: image
     image:
-      src: 'assets/images/lch/tote.svg'
+      src: '/assets/images/lch/tote.svg'
       width: 400
       modes: c_fit
       alt: 'Leeds Community Homes branded tote bag'
@@ -93,20 +93,20 @@ sections:
   blocks:
   - type: image
     image:
-      src: 'assets/images/lch/blog-one.svg'
+      src: '/assets/images/lch/blog-one.svg'
     animate:
       direction: fade-up
       delay: 250
   - type: image
     image:
-      src: 'assets/images/lch/blog-two.svg'
+      src: '/assets/images/lch/blog-two.svg'
     animate:
       direction: fade-up
       delay: 500
   - type: image
     class: hidden-sm
     image:
-      src: 'assets/images/lch/blog-three.svg'
+      src: '/assets/images/lch/blog-three.svg'
     animate:
       direction: fade-up
       delay: 750
@@ -114,16 +114,16 @@ sections:
   blocks:
   - type: image--full
     image:
-      src: 'assets/images/lch/cathy-1.jpg'
+      src: '/assets/images/lch/cathy-1.jpg'
       lazyload: true
   - type: image--full
     image:
-      src: 'assets/images/lch/cathy-2.jpg'
+      src: '/assets/images/lch/cathy-2.jpg'
       lazyload: true
 - height: square-height
   blocks:
   - type: image--full
     image:
-      src: 'assets/images/lch/cathy-3.jpg'
+      src: '/assets/images/lch/cathy-3.jpg'
       lazyload: true
 ---

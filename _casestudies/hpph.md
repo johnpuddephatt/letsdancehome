@@ -5,5 +5,5 @@ client: Hyde Park Picture House
 type:
 - Branding
 - Website
-thumb: uploads/HPPH.jpg
+thumb: /uploads/HPPH.jpg
 ---
