@@ -29,12 +29,10 @@ layout: default
           {% include imac.html img=block.image.src %}
         {% when 'poster' %}
           {% include image.html img=block.image.src %}
-        {% when 'print' %}
-          {% include print.html img=block.image.src %}
         {% when 'image' %}
           {% include cloudinarylazy.html img=block.image.src lazyload=block.image.lazyload width=block.image.width height=block.image.height modes=block.image.modes alt=block.image.alt %}
         {% when 'image--full' %}
-        {% include cloudinarylazy.html img=block.image.src lazyload=block.image.lazyload width=block.image.width height=block.image.height modes=block.image.modes alt=block.image.alt %}
+          {% include cloudinarylazy.html img=block.image.src lazyload=block.image.lazyload width=block.image.width height=block.image.height modes=block.image.modes alt=block.image.alt %}
         {% when 'text' %}
           {{ block.text | markdownify }}
         {% when 'laptop' %}

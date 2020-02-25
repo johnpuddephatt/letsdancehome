@@ -64,10 +64,10 @@ sections:
 - background: background-gray
   height: square-height
   blocks:
-  - type: print
+  - type: image
     image:
       src: 'assets/images/lch/businesscard-front.svg'
-  - type: print
+  - type: image
     class: hidden-sm
     image:
       src: 'assets/images/lch/businesscard-rear.svg'
